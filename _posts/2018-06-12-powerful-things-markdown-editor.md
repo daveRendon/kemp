@@ -862,6 +862,7 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<th>Features</th>
 			<th>Azure Load Balancer</th>
 			<th>Azure Application Gateway</th>
+			<th>Azure Traffic Manager</th>
 			<th>LoadMaster for Azure</th>
 		</tr>
 	</thead>
