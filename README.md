@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/wikiazure/kemp%20toolkit/_apis/build/status/kemp%20toolkit?branchName=master)](https://dev.azure.com/wikiazure/kemp%20toolkit/_build/latest?definitionId=23&branchName=master)
 # Kemp personal toolkit
 
 ## QuickStart Guide for POCs
