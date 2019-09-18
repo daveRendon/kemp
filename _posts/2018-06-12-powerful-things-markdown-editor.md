@@ -5,7 +5,1033 @@ author: sal
 categories: [ Jekyll, tutorial ]
 image: assets/images/16.jpg
 ---
+<style>
+thead{display:table-header-group;}
+tr,img{page-break-inside:avoid;}
+img{max-width:100%!important;vertical-align:middle;}
+p,h2,h3{orphans:3;widows:3;}
+h2,h3{page-break-after:avoid;}
+.navbar{display:none;position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent;}
+.btn>.caret,.dropup>.btn>.caret{border-top-color:#000!important;}
+.label{border:1px solid #000;}
+.table{border-collapse:collapse!important;width:100%;max-width:100%;margin-bottom:20px;}
+.table-bordered th,.table-bordered td{border:1px solid #ddd!important;}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;src:local("Source Sans Pro Bold"), local(SourceSansPro-Bold), url(https://d3av4ai3v402jn.cloudfront.net/sites/all/themes/custom/kemp_bootstrap/fonts/SourceSansPro-Bold.ttf) format(truetype);unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.glyphicon-asterisk:before{content:"\002a";}
+.glyphicon-plus:before{content:"\002b";}
+.glyphicon-euro:before,.glyphicon-eur:before{content:"\20ac";}
+.glyphicon-minus:before{content:"\2212";}
+.glyphicon-cloud:before{content:"\2601";}
+.glyphicon-envelope:before{content:"\2709";}
+.glyphicon-pencil:before{content:"\270f";}
+.glyphicon-glass:before{content:"\e001";}
+.glyphicon-music:before{content:"\e002";}
+.glyphicon-search:before{content:"\e003";}
+.glyphicon-heart:before{content:"\e005";}
+.glyphicon-star:before{content:"\e006";}
+.glyphicon-star-empty:before{content:"\e007";}
+.glyphicon-user:before{content:"\e008";}
+.glyphicon-film:before{content:"\e009";}
+.glyphicon-th-large:before{content:"\e010";}
+.glyphicon-th:before{content:"\e011";}
+.glyphicon-th-list:before{content:"\e012";}
+.glyphicon-ok:before{content:"\e013";}
+.glyphicon-remove:before{content:"\e014";}
+.glyphicon-zoom-in:before{content:"\e015";}
+.glyphicon-zoom-out:before{content:"\e016";}
+.glyphicon-off:before{content:"\e017";}
+.glyphicon-signal:before{content:"\e018";}
+.glyphicon-cog:before{content:"\e019";}
+.glyphicon-trash:before{content:"\e020";}
+.glyphicon-home:before{content:"\e021";}
+.glyphicon-file:before{content:"\e022";}
+.glyphicon-time:before{content:"\e023";}
+.glyphicon-road:before{content:"\e024";}
+.glyphicon-download-alt:before{content:"\e025";}
+.glyphicon-download:before{content:"\e026";}
+.glyphicon-upload:before{content:"\e027";}
+.glyphicon-inbox:before{content:"\e028";}
+.glyphicon-play-circle:before{content:"\e029";}
+.glyphicon-repeat:before{content:"\e030";}
+.glyphicon-refresh:before{content:"\e031";}
+.glyphicon-list-alt:before{content:"\e032";}
+.glyphicon-lock:before{content:"\e033";}
+.glyphicon-flag:before{content:"\e034";}
+.glyphicon-headphones:before{content:"\e035";}
+.glyphicon-volume-off:before{content:"\e036";}
+.glyphicon-volume-down:before{content:"\e037";}
+.glyphicon-volume-up:before{content:"\e038";}
+.glyphicon-qrcode:before{content:"\e039";}
+.glyphicon-barcode:before{content:"\e040";}
+.glyphicon-tag:before{content:"\e041";}
+.glyphicon-tags:before{content:"\e042";}
+.glyphicon-book:before{content:"\e043";}
+.glyphicon-bookmark:before{content:"\e044";}
+.glyphicon-print:before{content:"\e045";}
+.glyphicon-camera:before{content:"\e046";}
+.glyphicon-font:before{content:"\e047";}
+.glyphicon-bold:before{content:"\e048";}
+.glyphicon-italic:before{content:"\e049";}
+.glyphicon-text-height:before{content:"\e050";}
+.glyphicon-text-width:before{content:"\e051";}
+.glyphicon-align-left:before{content:"\e052";}
+.glyphicon-align-center:before{content:"\e053";}
+.glyphicon-align-right:before{content:"\e054";}
+.glyphicon-align-justify:before{content:"\e055";}
+.glyphicon-list:before{content:"\e056";}
+.glyphicon-indent-left:before{content:"\e057";}
+.glyphicon-indent-right:before{content:"\e058";}
+.glyphicon-facetime-video:before{content:"\e059";}
+.glyphicon-picture:before{content:"\e060";}
+.glyphicon-map-marker:before{content:"\e062";}
+.glyphicon-adjust:before{content:"\e063";}
+.glyphicon-tint:before{content:"\e064";}
+.glyphicon-edit:before{content:"\e065";}
+.glyphicon-share:before{content:"\e066";}
+.glyphicon-check:before{content:"\e067";}
+.glyphicon-move:before{content:"\e068";}
+.glyphicon-step-backward:before{content:"\e069";}
+.glyphicon-fast-backward:before{content:"\e070";}
+.glyphicon-backward:before{content:"\e071";}
+.glyphicon-play:before{content:"\e072";}
+.glyphicon-pause:before{content:"\e073";}
+.glyphicon-stop:before{content:"\e074";}
+.glyphicon-forward:before{content:"\e075";}
+.glyphicon-fast-forward:before{content:"\e076";}
+.glyphicon-step-forward:before{content:"\e077";}
+.glyphicon-eject:before{content:"\e078";}
+.glyphicon-chevron-left:before{content:"\e079";}
+.glyphicon-chevron-right:before{content:"\e080";}
+.glyphicon-plus-sign:before{content:"\e081";}
+.glyphicon-minus-sign:before{content:"\e082";}
+.glyphicon-remove-sign:before{content:"\e083";}
+.glyphicon-ok-sign:before{content:"\e084";}
+.glyphicon-question-sign:before{content:"\e085";}
+.glyphicon-info-sign:before{content:"\e086";}
+.glyphicon-screenshot:before{content:"\e087";}
+.glyphicon-remove-circle:before{content:"\e088";}
+.glyphicon-ok-circle:before{content:"\e089";}
+.glyphicon-ban-circle:before{content:"\e090";}
+.glyphicon-arrow-left:before{content:"\e091";}
+.glyphicon-arrow-right:before{content:"\e092";}
+.glyphicon-arrow-up:before{content:"\e093";}
+.glyphicon-arrow-down:before{content:"\e094";}
+.glyphicon-share-alt:before{content:"\e095";}
+.glyphicon-resize-full:before{content:"\e096";}
+.glyphicon-resize-small:before{content:"\e097";}
+.glyphicon-exclamation-sign:before{content:"\e101";}
+.glyphicon-gift:before{content:"\e102";}
+.glyphicon-leaf:before{content:"\e103";}
+.glyphicon-fire:before{content:"\e104";}
+.glyphicon-eye-open:before{content:"\e105";}
+.glyphicon-eye-close:before{content:"\e106";}
+.glyphicon-warning-sign:before{content:"\e107";}
+.glyphicon-plane:before{content:"\e108";}
+.glyphicon-calendar:before{content:"\e109";}
+.glyphicon-random:before{content:"\e110";}
+.glyphicon-comment:before{content:"\e111";}
+.glyphicon-magnet:before{content:"\e112";}
+.glyphicon-chevron-up:before{content:"\e113";}
+.glyphicon-chevron-down:before{content:"\e114";}
+.glyphicon-retweet:before{content:"\e115";}
+.glyphicon-shopping-cart:before{content:"\e116";}
+.glyphicon-folder-close:before{content:"\e117";}
+.glyphicon-folder-open:before{content:"\e118";}
+.glyphicon-resize-vertical:before{content:"\e119";}
+.glyphicon-resize-horizontal:before{content:"\e120";}
+.glyphicon-hdd:before{content:"\e121";}
+.glyphicon-bullhorn:before{content:"\e122";}
+.glyphicon-bell:before{content:"\e123";}
+.glyphicon-certificate:before{content:"\e124";}
+.glyphicon-thumbs-up:before{content:"\e125";}
+.glyphicon-thumbs-down:before{content:"\e126";}
+.glyphicon-hand-right:before{content:"\e127";}
+.glyphicon-hand-left:before{content:"\e128";}
+.glyphicon-hand-up:before{content:"\e129";}
+.glyphicon-hand-down:before{content:"\e130";}
+.glyphicon-circle-arrow-right:before{content:"\e131";}
+.glyphicon-circle-arrow-left:before{content:"\e132";}
+.glyphicon-circle-arrow-up:before{content:"\e133";}
+.glyphicon-circle-arrow-down:before{content:"\e134";}
+.glyphicon-globe:before{content:"\e135";}
+.glyphicon-wrench:before{content:"\e136";}
+.glyphicon-tasks:before{content:"\e137";}
+.glyphicon-filter:before{content:"\e138";}
+.glyphicon-briefcase:before{content:"\e139";}
+.glyphicon-fullscreen:before{content:"\e140";}
+.glyphicon-dashboard:before{content:"\e141";}
+.glyphicon-paperclip:before{content:"\e142";}
+.glyphicon-heart-empty:before{content:"\e143";}
+.glyphicon-link:before{content:"\e144";}
+.glyphicon-phone:before{content:"\e145";}
+.glyphicon-pushpin:before{content:"\e146";}
+.glyphicon-usd:before{content:"\e148";}
+.glyphicon-gbp:before{content:"\e149";}
+.glyphicon-sort:before{content:"\e150";}
+.glyphicon-sort-by-alphabet:before{content:"\e151";}
+.glyphicon-sort-by-alphabet-alt:before{content:"\e152";}
+.glyphicon-sort-by-order:before{content:"\e153";}
+.glyphicon-sort-by-order-alt:before{content:"\e154";}
+.glyphicon-sort-by-attributes:before{content:"\e155";}
+.glyphicon-sort-by-attributes-alt:before{content:"\e156";}
+.glyphicon-unchecked:before{content:"\e157";}
+.glyphicon-expand:before{content:"\e158";}
+.glyphicon-collapse-down:before{content:"\e159";}
+.glyphicon-collapse-up:before{content:"\e160";}
+.glyphicon-log-in:before{content:"\e161";}
+.glyphicon-flash:before{content:"\e162";}
+.glyphicon-log-out:before{content:"\e163";}
+.glyphicon-new-window:before{content:"\e164";}
+.glyphicon-record:before{content:"\e165";}
+.glyphicon-save:before{content:"\e166";}
+.glyphicon-open:before{content:"\e167";}
+.glyphicon-saved:before{content:"\e168";}
+.glyphicon-import:before{content:"\e169";}
+.glyphicon-export:before{content:"\e170";}
+.glyphicon-send:before{content:"\e171";}
+.glyphicon-floppy-disk:before{content:"\e172";}
+.glyphicon-floppy-saved:before{content:"\e173";}
+.glyphicon-floppy-remove:before{content:"\e174";}
+.glyphicon-floppy-save:before{content:"\e175";}
+.glyphicon-floppy-open:before{content:"\e176";}
+.glyphicon-credit-card:before{content:"\e177";}
+.glyphicon-transfer:before{content:"\e178";}
+.glyphicon-cutlery:before{content:"\e179";}
+.glyphicon-header:before{content:"\e180";}
+.glyphicon-compressed:before{content:"\e181";}
+.glyphicon-earphone:before{content:"\e182";}
+.glyphicon-phone-alt:before{content:"\e183";}
+.glyphicon-tower:before{content:"\e184";}
+.glyphicon-stats:before{content:"\e185";}
+.glyphicon-sd-video:before{content:"\e186";}
+.glyphicon-hd-video:before{content:"\e187";}
+.glyphicon-subtitles:before{content:"\e188";}
+.glyphicon-sound-stereo:before{content:"\e189";}
+.glyphicon-sound-dolby:before{content:"\e190";}
+.glyphicon-sound-5-1:before{content:"\e191";}
+.glyphicon-sound-6-1:before{content:"\e192";}
+.glyphicon-sound-7-1:before{content:"\e193";}
+.glyphicon-copyright-mark:before{content:"\e194";}
+.glyphicon-registration-mark:before{content:"\e195";}
+.glyphicon-cloud-download:before{content:"\e197";}
+.glyphicon-cloud-upload:before{content:"\e198";}
+.glyphicon-tree-conifer:before{content:"\e199";}
+.glyphicon-tree-deciduous:before{content:"\e200";}
+.glyphicon-cd:before{content:"\e201";}
+.glyphicon-save-file:before{content:"\e202";}
+.glyphicon-open-file:before{content:"\e203";}
+.glyphicon-level-up:before{content:"\e204";}
+.glyphicon-copy:before{content:"\e205";}
+.glyphicon-paste:before{content:"\e206";}
+.glyphicon-alert:before{content:"\e209";}
+.glyphicon-equalizer:before{content:"\e210";}
+.glyphicon-king:before{content:"\e211";}
+.glyphicon-queen:before{content:"\e212";}
+.glyphicon-pawn:before{content:"\e213";}
+.glyphicon-bishop:before{content:"\e214";}
+.glyphicon-knight:before{content:"\e215";}
+.glyphicon-baby-formula:before{content:"\e216";}
+.glyphicon-tent:before{content:"\26fa";}
+.glyphicon-blackboard:before{content:"\e218";}
+.glyphicon-bed:before{content:"\e219";}
+.glyphicon-apple:before{content:"\f8ff";}
+.glyphicon-erase:before{content:"\e221";}
+.glyphicon-hourglass:before{content:"\231b";}
+.glyphicon-lamp:before{content:"\e223";}
+.glyphicon-duplicate:before{content:"\e224";}
+.glyphicon-piggy-bank:before{content:"\e225";}
+.glyphicon-scissors:before{content:"\e226";}
+.glyphicon-scale:before{content:"\e230";}
+.glyphicon-ice-lolly:before{content:"\e231";}
+.glyphicon-ice-lolly-tasted:before{content:"\e232";}
+.glyphicon-education:before{content:"\e233";}
+.glyphicon-option-horizontal:before{content:"\e234";}
+.glyphicon-option-vertical:before{content:"\e235";}
+.glyphicon-menu-hamburger:before{content:"\e236";}
+.glyphicon-modal-window:before{content:"\e237";}
+.glyphicon-oil:before{content:"\e238";}
+.glyphicon-grain:before{content:"\e239";}
+.glyphicon-sunglasses:before{content:"\e240";}
+.glyphicon-text-size:before{content:"\e241";}
+.glyphicon-text-color:before{content:"\e242";}
+.glyphicon-text-background:before{content:"\e243";}
+.glyphicon-object-align-top:before{content:"\e244";}
+.glyphicon-object-align-bottom:before{content:"\e245";}
+.glyphicon-object-align-horizontal:before{content:"\e246";}
+.glyphicon-object-align-left:before{content:"\e247";}
+.glyphicon-object-align-vertical:before{content:"\e248";}
+.glyphicon-object-align-right:before{content:"\e249";}
+.glyphicon-triangle-right:before{content:"\e250";}
+.glyphicon-triangle-left:before{content:"\e251";}
+.glyphicon-triangle-bottom:before{content:"\e252";}
+.glyphicon-triangle-top:before{content:"\e253";}
+.glyphicon-console:before{content:"\e254";}
+.glyphicon-superscript:before{content:"\e255";}
+.glyphicon-subscript:before{content:"\e256";}
+.glyphicon-menu-left:before{content:"\e257";}
+.glyphicon-menu-right:before{content:"\e258";}
+.glyphicon-menu-down:before{content:"\e259";}
+.glyphicon-menu-up:before{content:"\e260";}
+html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body{font-size:16px;line-height:1.428571429;color:#333;background-color:#fff;position:relative;font-family:'Source Sans Pro', Verdana, sans-serif;--s:100px;}
+input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+.img-responsive{display:block;max-width:100%;height:auto;}
+.img-rounded{border-radius:6px;}
+.img-thumbnail{line-height:1.428571429;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto;padding:4px;}
+.img-circle{border-radius:50%;}
+hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee;}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);border:0;margin:-1px;padding:0;}
+.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;overflow:visible;clip:auto;margin:0;}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h1 small,h1 .small,h2 small,h2 .small,h3 small,h3 .small,h4 small,h4 .small,h5 small,h5 .small,h6 small,h6 .small,.h1 small,.h1 .small,.h2 small,.h2 .small,.h3 small,.h3 .small,.h4 small,.h4 .small,.h5 small,.h5 .small,.h6 small,.h6 .small{font-weight:400;line-height:1;color:#777;}
+h1,.h1,h2,.h2,h3,.h3{margin-top:20px;margin-bottom:10px;}
+h1 small,h1 .small,.h1 small,.h1 .small,h2 small,h2 .small,.h2 small,.h2 .small,h3 small,h3 .small,.h3 small,.h3 .small{font-size:65%;}
+h4,.h4,h5,.h5,h6,.h6{margin-top:10px;margin-bottom:10px;}
+h1,.h1{font-size:3.375em;font-weight:500;color:#fff;line-height:1.222em;margin-bottom:.444em;margin-top:0;}
+h2,.h2{font-size:2.25em;font-weight:400;color:#00205b;line-height:1.333em;margin-bottom:.666em;margin-top:0;}
+h3,.h3{font-size:1.5em;color:#333334;font-weight:600;line-height:1.5em;margin-bottom:1em;margin-top:0;}
+h4,.h4{font-size:1.25em;color:#4d4d4d;font-weight:400;line-height:1.6em;margin-bottom:1.2em;margin-top:0;}
+h5,.h5{font-size:1.125em;color:#333334;font-weight:400;line-height:1.667em;margin-bottom:1.333em;margin-top:0;}
+h6,.h6{font-size:.875em;color:#333334;font-weight:400;line-height:1.857em;margin-bottom:1.143em;margin-top:0;}
+.lead{margin-bottom:20px;font-size:18px;font-weight:300;line-height:1.4;}
+mark,.mark{background-color:#fcf8e3;padding:.2em;}
+.text-right{text-align:right;}
+.text-justify{text-align:justify;}
+.text-lowercase{text-transform:lowercase;}
+.text-capitalize{text-transform:capitalize;}
+a.text-primary:hover,a.text-primary:focus{color:#286090;}
+.text-info{color:#31708f;}
+a.bg-primary:hover,a.bg-primary:focus{background-color:#286090;}
+a.bg-success:hover,a.bg-success:focus{background-color:#c1e2b3;}
+a.bg-info:hover,a.bg-info:focus{background-color:#afd9ee;}
+a.bg-warning:hover,a.bg-warning:focus{background-color:#f7ecb5;}
+a.bg-danger:hover,a.bg-danger:focus{background-color:#e4b9b9;}
+.page-header{padding-bottom:9px;border-bottom:1px solid #eee;margin:40px 0 20px;}
+ul,ol{margin-top:0;margin-bottom:10px;}
+.list-unstyled{padding-left:0;list-style:none;}
+.list-inline{padding-left:0;list-style:none;margin-left:-5px;}
+.list-inline>li{display:inline-block;padding-left:5px;padding-right:5px;}
+dl{margin-top:0;margin-bottom:20px;}
+dt,dd{line-height:1.428571429;}
+abbr[title],abbr[data-original-title]{cursor:help;border-bottom:1px dotted #777;}
+.initialism{font-size:90%;}
+blockquote{border-left:4px solid #fec10d;font-size:1em;margin:0 0 2em;padding:1.5em;}
+blockquote footer,blockquote small,blockquote .small{display:block;font-size:80%;line-height:1.428571429;color:#777;}
+blockquote footer:before,blockquote small:before,blockquote .small:before{content:'\2014 \00A0';}
+.blockquote-reverse,blockquote.pull-right{padding-right:15px;padding-left:0;border-right:5px solid #eee;border-left:0;text-align:right;}
+.blockquote-reverse footer:before,.blockquote-reverse small:before,.blockquote-reverse .small:before,blockquote.pull-right footer:before,blockquote.pull-right small:before,blockquote.pull-right .small:before{content:'';}
+.blockquote-reverse footer:after,.blockquote-reverse small:after,.blockquote-reverse .small:after,blockquote.pull-right footer:after,blockquote.pull-right small:after,blockquote.pull-right .small:after{content:'\00A0 \2014';}
+address{margin-bottom:20px;font-style:normal;line-height:1.428571429;}
+code,kbd,pre,samp{font-family:Menlo, Monaco, Consolas, "Courier New", monospace;}
+code{font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px;padding:2px 4px;}
+kbd{font-size:90%;color:#fff;background-color:#333;border-radius:3px;box-shadow:inset 0 -1px 0 rgba(0,0,0,0.25);padding:2px 4px;}
+kbd kbd{font-size:100%;font-weight:700;box-shadow:none;padding:0;}
+pre{display:block;font-size:15px;line-height:1.428571429;word-break:break-all;word-wrap:break-word;color:#333;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px;margin:0 0 10px;padding:9.5px;}
+pre code{font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0;padding:0;}
+.pre-scrollable{max-height:340px;overflow-y:scroll;}
+.col-xs-1{width:8.3333333333%;}
+.col-xs-2{width:16.6666666667%;}
+.col-xs-3{width:25%;}
+.col-xs-4{width:33.3333333333%;}
+.col-xs-5{width:41.6666666667%;}
+.col-xs-6{width:50%;}
+.col-xs-7{width:58.3333333333%;}
+.col-xs-8{width:66.6666666667%;}
+.col-xs-9{width:75%;}
+.col-xs-10{width:83.3333333333%;}
+.col-xs-11{width:91.6666666667%;}
+.col-xs-pull-0{right:auto;}
+.col-xs-pull-1{right:8.3333333333%;}
+.col-xs-pull-2{right:16.6666666667%;}
+.col-xs-pull-3{right:25%;}
+.col-xs-pull-4{right:33.3333333333%;}
+.col-xs-pull-5{right:41.6666666667%;}
+.col-xs-pull-6{right:50%;}
+.col-xs-pull-7{right:58.3333333333%;}
+.col-xs-pull-8{right:66.6666666667%;}
+.col-xs-pull-9{right:75%;}
+.col-xs-pull-10{right:83.3333333333%;}
+.col-xs-pull-11{right:91.6666666667%;}
+.col-xs-pull-12{right:100%;}
+.col-xs-push-1{left:8.3333333333%;}
+.col-xs-push-2{left:16.6666666667%;}
+.col-xs-push-3{left:25%;}
+.col-xs-push-4{left:33.3333333333%;}
+.col-xs-push-5{left:41.6666666667%;}
+.col-xs-push-6{left:50%;}
+.col-xs-push-7{left:58.3333333333%;}
+.col-xs-push-8{left:66.6666666667%;}
+.col-xs-push-9{left:75%;}
+.col-xs-push-10{left:83.3333333333%;}
+.col-xs-push-11{left:91.6666666667%;}
+.col-xs-offset-1{margin-left:8.3333333333%;}
+.col-xs-offset-2{margin-left:16.6666666667%;}
+.col-xs-offset-3{margin-left:25%;}
+.col-xs-offset-4{margin-left:33.3333333333%;}
+.col-xs-offset-5{margin-left:41.6666666667%;}
+.col-xs-offset-6{margin-left:50%;}
+.col-xs-offset-7{margin-left:58.3333333333%;}
+.col-xs-offset-8{margin-left:66.6666666667%;}
+.col-xs-offset-9{margin-left:75%;}
+.col-xs-offset-10{margin-left:83.3333333333%;}
+.col-xs-offset-11{margin-left:91.6666666667%;}
+.col-xs-offset-12{margin-left:100%;}
+caption{padding-top:8px;padding-bottom:8px;color:#777;text-align:left;}
+.table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd;}
+.table>tbody+tbody{border-top:2px solid #ddd;}
+.table-condensed>thead>tr>th,.table-condensed>thead>tr>td,.table-condensed>tbody>tr>th,.table-condensed>tbody>tr>td,.table-condensed>tfoot>tr>th,.table-condensed>tfoot>tr>td{padding:5px;}
+.table-bordered>thead>tr>th,.table-bordered>thead>tr>td{border-bottom-width:2px;}
+.table-striped>tbody>tr:nth-of-type(odd){background-color:#f9f9f9;}
+table col[class*="col-"]{position:static;float:none;display:table-column;}
+table td[class*="col-"],table th[class*="col-"]{position:static;float:none;display:table-cell;}
+.table-hover>tbody>tr>td.active:hover,.table-hover>tbody>tr>th.active:hover,.table-hover>tbody>tr.active:hover>td,.table-hover>tbody>tr:hover>.active,.table-hover>tbody>tr.active:hover>th{background-color:#e8e8e8;}
+.table-hover>tbody>tr>td.success:hover,.table-hover>tbody>tr>th.success:hover,.table-hover>tbody>tr.success:hover>td,.table-hover>tbody>tr:hover>.success,.table-hover>tbody>tr.success:hover>th{background-color:#d0e9c6;}
+.table-hover>tbody>tr>td.info:hover,.table-hover>tbody>tr>th.info:hover,.table-hover>tbody>tr.info:hover>td,.table-hover>tbody>tr:hover>.info,.table-hover>tbody>tr.info:hover>th{background-color:#c4e3f3;}
+.table-hover>tbody>tr>td.warning:hover,.table-hover>tbody>tr>th.warning:hover,.table-hover>tbody>tr.warning:hover>td,.table-hover>tbody>tr:hover>.warning,.table-hover>tbody>tr.warning:hover>th{background-color:#faf2cc;}
+.table-hover>tbody>tr>td.danger:hover,.table-hover>tbody>tr>th.danger:hover,.table-hover>tbody>tr.danger:hover>td,.table-hover>tbody>tr:hover>.danger,.table-hover>tbody>tr.danger:hover>th{background-color:#ebcccc;}
+.table-responsive{overflow-x:auto;min-height:.01%;}
 
+.fa.fa-glass:before{content:"\f000";}
+.fa.fa-star-o:before{content:"\f005";}
+.fa.fa-close:before,.fa.fa-remove:before{content:"\f00d";}
+.fa.fa-gear:before{content:"\f013";}
+.fa.fa-file-o:before{content:"\f15b";}
+.fa.fa-clock-o:before{content:"\f017";}
+.fa.fa-arrow-circle-o-down:before{content:"\f358";}
+.fa.fa-arrow-circle-o-up:before{content:"\f35b";}
+.fa.fa-play-circle-o:before{content:"\f144";}
+.fa.fa-repeat:before,.fa.fa-rotate-right:before{content:"\f01e";}
+.fa.fa-refresh:before{content:"\f021";}
+.fa.fa-dedent:before{content:"\f03b";}
+.fa.fa-video-camera:before{content:"\f03d";}
+.fa.fa-pencil:before{content:"\f303";}
+.fa.fa-map-marker:before{content:"\f3c5";}
+.fa.fa-pencil-square-o:before{content:"\f044";}
+.fa.fa-share-square-o:before{content:"\f14d";}
+.fa.fa-arrows:before{content:"\f0b2";}
+.fa.fa-times-circle-o:before{content:"\f057";}
+.fa.fa-check-circle-o:before{content:"\f058";}
+.fa.fa-mail-forward:before{content:"\f064";}
+.fa.fa-warning:before{content:"\f071";}
+.fa.fa-calendar:before{content:"\f073";}
+.fa.fa-arrows-v:before{content:"\f338";}
+.fa.fa-arrows-h:before{content:"\f337";}
+.fa.fa-gears:before{content:"\f085";}
+.fa.fa-thumbs-o-up:before{content:"\f164";}
+.fa.fa-thumbs-o-down:before{content:"\f165";}
+.fa.fa-heart-o:before{content:"\f004";}
+.fa.fa-sign-out:before{content:"\f2f5";}
+.fa.fa-linkedin-square:before{content:"\f08c";}
+.fa.fa-thumb-tack:before{content:"\f08d";}
+.fa.fa-external-link:before{content:"\f35d";}
+.fa.fa-sign-in:before{content:"\f2f6";}
+.fa.fa-lemon-o:before{content:"\f094";}
+.fa.fa-square-o:before{content:"\f0c8";}
+.fa.fa-bookmark-o:before{content:"\f02e";}
+.fa.fa-feed:before{content:"\f09e";}
+.fa.fa-hdd-o:before{content:"\f0a0";}
+.fa.fa-hand-o-right:before{content:"\f0a4";}
+.fa.fa-hand-o-left:before{content:"\f0a5";}
+.fa.fa-hand-o-up:before{content:"\f0a6";}
+.fa.fa-hand-o-down:before{content:"\f0a7";}
+.fa.fa-arrows-alt:before{content:"\f31e";}
+.fa.fa-group:before{content:"\f0c0";}
+.fa.fa-chain:before{content:"\f0c1";}
+.fa.fa-scissors:before{content:"\f0c4";}
+.fa.fa-files-o:before{content:"\f0c5";}
+.fa.fa-floppy-o:before{content:"\f0c7";}
+.fa.fa-navicon:before,.fa.fa-reorder:before{content:"\f0c9";}
+.fa.fa-google-plus:before{content:"\f0d5";}
+.fa.fa-money:before{content:"\f3d1";}
+.fa.fa-unsorted:before{content:"\f0dc";}
+.fa.fa-sort-desc:before{content:"\f0dd";}
+.fa.fa-sort-asc:before{content:"\f0de";}
+.fa.fa-linkedin:before{content:"\f0e1";}
+.fa.fa-rotate-left:before{content:"\f0e2";}
+.fa.fa-legal:before{content:"\f0e3";}
+.fa.fa-dashboard:before,.fa.fa-tachometer:before{content:"\f3fd";}
+.fa.fa-comment-o:before{content:"\f075";}
+.fa.fa-comments-o:before{content:"\f086";}
+.fa.fa-flash:before{content:"\f0e7";}
+.fa.fa-paste:before{content:"\f328";}
+.fa.fa-lightbulb-o:before{content:"\f0eb";}
+.fa.fa-exchange:before{content:"\f362";}
+.fa.fa-cloud-download:before{content:"\f381";}
+.fa.fa-cloud-upload:before{content:"\f382";}
+.fa.fa-bell-o:before{content:"\f0f3";}
+.fa.fa-cutlery:before{content:"\f2e7";}
+.fa.fa-building-o:before{content:"\f1ad";}
+.fa.fa-hospital-o:before{content:"\f0f8";}
+.fa.fa-tablet:before{content:"\f3fa";}
+.fa.fa-mobile-phone:before,.fa.fa-mobile:before{content:"\f3cd";}
+.fa.fa-mail-reply:before{content:"\f3e5";}
+.fa.fa-folder-o:before{content:"\f07b";}
+.fa.fa-folder-open-o:before{content:"\f07c";}
+.fa.fa-smile-o:before{content:"\f118";}
+.fa.fa-frown-o:before{content:"\f119";}
+.fa.fa-meh-o:before{content:"\f11a";}
+.fa.fa-keyboard-o:before{content:"\f11c";}
+.fa.fa-flag-o:before{content:"\f024";}
+.fa.fa-mail-reply-all:before{content:"\f122";}
+.fa.fa-code-fork:before{content:"\f126";}
+.fa.fa-chain-broken:before{content:"\f127";}
+.fa.fa-shield:before{content:"\f3ed";}
+.fa.fa-calendar-o:before{content:"\f133";}
+.fa.fa-ticket:before{content:"\f3ff";}
+.fa.fa-minus-square-o:before{content:"\f146";}
+.fa.fa-level-up:before{content:"\f3bf";}
+.fa.fa-level-down:before{content:"\f3be";}
+.fa.fa-pencil-square:before{content:"\f14b";}
+.fa.fa-external-link-square:before{content:"\f360";}
+.fa.fa-eur:before,.fa.fa-euro:before{content:"\f153";}
+.fa.fa-gbp:before{content:"\f154";}
+.fa.fa-dollar:before,.fa.fa-usd:before{content:"\f155";}
+.fa.fa-inr:before,.fa.fa-rupee:before{content:"\f156";}
+.fa.fa-cny:before,.fa.fa-jpy:before,.fa.fa-rmb:before,.fa.fa-yen:before{content:"\f157";}
+.fa.fa-rouble:before,.fa.fa-rub:before,.fa.fa-ruble:before{content:"\f158";}
+.fa.fa-krw:before,.fa.fa-won:before{content:"\f159";}
+.fa.fa-bitcoin:before{content:"\f15a";}
+.fa.fa-sort-alpha-asc:before{content:"\f15d";}
+.fa.fa-sort-alpha-desc:before{content:"\f15e";}
+.fa.fa-sort-amount-asc:before{content:"\f160";}
+.fa.fa-sort-amount-desc:before{content:"\f161";}
+.fa.fa-sort-numeric-asc:before{content:"\f162";}
+.fa.fa-sort-numeric-desc:before{content:"\f163";}
+.fa.fa-youtube-play:before{content:"\f167";}
+.fa.fa-bitbucket-square:before{content:"\f171";}
+.fa.fa-long-arrow-down:before{content:"\f309";}
+.fa.fa-long-arrow-up:before{content:"\f30c";}
+.fa.fa-long-arrow-left:before{content:"\f30a";}
+.fa.fa-long-arrow-right:before{content:"\f30b";}
+.fa.fa-gittip:before{content:"\f184";}
+.fa.fa-sun-o:before{content:"\f185";}
+.fa.fa-moon-o:before{content:"\f186";}
+.fa.fa-arrow-circle-o-right:before{content:"\f35a";}
+.fa.fa-arrow-circle-o-left:before{content:"\f359";}
+.fa.fa-dot-circle-o:before{content:"\f192";}
+.fa.fa-try:before,.fa.fa-turkish-lira:before{content:"\f195";}
+.fa.fa-plus-square-o:before{content:"\f0fe";}
+.fa.fa-bank:before,.fa.fa-institution:before{content:"\f19c";}
+.fa.fa-mortar-board:before{content:"\f19d";}
+.fa.fa-spoon:before{content:"\f2e5";}
+.fa.fa-automobile:before{content:"\f1b9";}
+.fa.fa-cab:before{content:"\f1ba";}
+.fa.fa-envelope-o:before{content:"\f0e0";}
+.fa.fa-file-pdf-o:before{content:"\f1c1";}
+.fa.fa-file-word-o:before{content:"\f1c2";}
+.fa.fa-file-excel-o:before{content:"\f1c3";}
+.fa.fa-file-powerpoint-o:before{content:"\f1c4";}
+.fa.fa-file-code-o:before{content:"\f1c9";}
+.fa.fa-circle-o-notch:before{content:"\f1ce";}
+.fa.fa-ge:before{content:"\f1d1";}
+.fa.fa-wechat:before{content:"\f1d7";}
+.fa.fa-header:before{content:"\f1dc";}
+.fa.fa-sliders:before{content:"\f1de";}
+.fa.fa-newspaper-o:before{content:"\f1ea";}
+.fa.fa-bell-slash-o:before{content:"\f1f6";}
+.fa.fa-eyedropper:before{content:"\f1fb";}
+.fa.fa-area-chart:before{content:"\f1fe";}
+.fa.fa-pie-chart:before{content:"\f200";}
+.fa.fa-line-chart:before{content:"\f201";}
+.fa.fa-cc:before{content:"\f20a";}
+.fa.fa-ils:before,.fa.fa-shekel:before,.fa.fa-sheqel:before{content:"\f20b";}
+.fa.fa-diamond:before{content:"\f3a5";}
+.fa.fa-intersex:before{content:"\f224";}
+.fa.fa-facebook-official:before{content:"\f09a";}
+.fa.fa-hotel:before{content:"\f236";}
+.fa.fa-yc:before{content:"\f23b";}
+.fa.fa-battery-4:before,.fa.fa-battery:before{content:"\f240";}
+.fa.fa-battery-3:before{content:"\f241";}
+.fa.fa-battery-2:before{content:"\f242";}
+.fa.fa-battery-1:before{content:"\f243";}
+.fa.fa-battery-0:before{content:"\f244";}
+.fa.fa-sticky-note-o:before{content:"\f249";}
+.fa.fa-hourglass-o:before{content:"\f254";}
+.fa.fa-hourglass-1:before{content:"\f251";}
+.fa.fa-hourglass-2:before{content:"\f252";}
+.fa.fa-hourglass-3:before{content:"\f253";}
+.fa.fa-hand-scissors-o:before{content:"\f257";}
+.fa.fa-hand-lizard-o:before{content:"\f258";}
+.fa.fa-hand-spock-o:before{content:"\f259";}
+.fa.fa-hand-pointer-o:before{content:"\f25a";}
+.fa.fa-hand-peace-o:before{content:"\f25b";}
+.fa.fa-television:before{content:"\f26c";}
+.fa.fa-calendar-plus-o:before{content:"\f271";}
+.fa.fa-calendar-minus-o:before{content:"\f272";}
+.fa.fa-calendar-times-o:before{content:"\f273";}
+.fa.fa-calendar-check-o:before{content:"\f274";}
+.fa.fa-map-o:before{content:"\f279";}
+.fa.fa-vimeo:before{content:"\f27d";}
+.fa.fa-credit-card-alt:before{content:"\f09d";}
+.fa.fa-pause-circle-o:before{content:"\f28b";}
+.fa.fa-stop-circle-o:before{content:"\f28d";}
+.fa.fa-wheelchair-alt:before{content:"\f368";}
+.fa.fa-question-circle-o:before{content:"\f059";}
+.fa.fa-volume-control-phone:before{content:"\f2a0";}
+.fa.fa-asl-interpreting:before{content:"\f2a3";}
+.fa.fa-deafness:before,.fa.fa-hard-of-hearing:before{content:"\f2a4";}
+.fa.fa-signing:before{content:"\f2a7";}
+.fa.fa-handshake-o:before{content:"\f2b5";}
+.fa.fa-envelope-open-o:before{content:"\f2b6";}
+.fa.fa-address-book-o:before{content:"\f2b9";}
+.fa.fa-user-circle-o:before{content:"\f2bd";}
+.fa.fa-user-o:before{content:"\f007";}
+.fa.fa-thermometer-4:before,.fa.fa-thermometer:before{content:"\f2c7";}
+.fa.fa-thermometer-3:before{content:"\f2c8";}
+.fa.fa-thermometer-2:before{content:"\f2c9";}
+.fa.fa-thermometer-1:before{content:"\f2ca";}
+.fa.fa-thermometer-0:before{content:"\f2cb";}
+.fa.fa-bathtub:before,.fa.fa-s15:before{content:"\f2cd";}
+.fa.fa-eercast:before{content:"\f2da";}
+.fa.fa-snowflake-o:before{content:"\f2dc";}
+.table td,.table th,.tab-matrix .container .hold .tabbed-top-contain .sticky-hold.opaque .table tr,#webform-client-form-11751 .select2-selection,#webform-client-form-10835 .select2-selection,#webform-client-form-13615 .select2-selection,#webform-client-form-13617 .select2-selection,#webform-client-form-11751 .form-control,#webform-client-form-10835 .form-control,#webform-client-form-13615 .form-control,#webform-client-form-13617 .form-control,#webform-client-form-11751 #webform-component-comments .form-control,#webform-client-form-10835 #webform-component-comments .form-control,#webform-client-form-13615 #webform-component-comments .form-control,#webform-client-form-13617 #webform-component-comments .form-control,.selector-panel li.active a.selector:hover,.selector-panel li.active a.selector:focus{background-color:#fff!important;}
+.glyphicon-bitcoin:before,.glyphicon-btc:before,.glyphicon-xbt:before{content:"\e227";}
+.glyphicon-yen:before,.glyphicon-jpy:before{content:"\00a5";}
+.glyphicon-ruble:before,.glyphicon-rub:before{content:"\20bd";}
+*,:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a:focus,input[type="file"]:focus,input[type="radio"]:focus,input[type="checkbox"]:focus,.btn:focus,.btn.focus,.btn:active:focus,.btn:active.focus,.btn.active:focus,.btn.active.focus{outline:5px auto 0;outline-offset:-2px;}
+figure,form#search-block-form,#topimgbox .holder .txt p:last-of-type{margin:0;}
+[role="button"],.selector-tabs #chevsholder #leftchev,.selector-tabs #chevsholder #rightchev{cursor:pointer;}
+h4 small,h4 .small,.h4 small,.h4 .small,h5 small,h5 .small,.h5 small,.h5 .small,h6 small,h6 .small,.h6 small,.h6 .small,small,.small{font-size:75%;}
+p,.tabs--secondary,html.js #features-export-form fieldset.features-export-component,fieldset.features-export-component{margin:0 0 10px;}
+.text-left,th,.table-narrow th:first-of-type,.table-narrow td:first-of-type,.table-wide th:first-of-type,.table-wide td:first-of-type,.table-long-text th:first-of-type,.table-long-text td:first-of-type,.table-long-text th:not(:first-of-type),.table-long-text td:not(:first-of-type),.table-jambalaya tr:not(.divider):not(.text) td:first-of-type,.table-jambalaya tr:not(.divider):not(.text) th:first-of-type{text-align:left;}
+.text-center,.feature-360-self-selector .row,.image-toggle-parent .image-toggle,.tab-matrix .container .hold .tabbed-top-contain .sticky-hold .table tr td:not(:first-of-type),#webform-client-form-11751 #edit-actions,#webform-client-form-10835 #edit-actions,#webform-client-form-13615 #edit-actions,#webform-client-form-13617 #edit-actions,#webform-client-form-11751 #webform-component-partner-type-select #edit-submitted-partner-type-select,#webform-client-form-10835 #webform-component-partner-type-select #edit-submitted-partner-type-select,#webform-client-form-13615 #webform-component-partner-type-select #edit-submitted-partner-type-select,#webform-client-form-13617 #webform-component-partner-type-select #edit-submitted-partner-type-select,.table-narrow th:not(:first-of-type),.table-narrow td:not(:first-of-type),.table-wide th:not(:first-of-type),.table-wide td:not(:first-of-type),.table-long-text th:not(:first-of-type),.table-long-text td:not(:first-of-type){text-align:center;}
+.text-nowrap,.book-toc>.dropdown-menu>.dropdown-header{white-space:nowrap;}
+.text-uppercase,.initialism,.node-type-case #block-menu-menu-more-resources .block-inner h2::first-letter,.node-type-case #block-menu-menu-media .block-inner h2::first-letter,.node-type-case #block-menu-menu-community .block-inner h2::first-letter,.page-load-balancing-webinars-and-videos #block-menu-menu-more-resources .block-inner h2::first-letter,.page-load-balancing-webinars-and-videos #block-menu-menu-media .block-inner h2::first-letter,.page-load-balancing-webinars-and-videos #block-menu-menu-community .block-inner h2::first-letter,.page-load-balancing-webinars-slideshows #block-menu-menu-more-resources .block-inner h2::first-letter,.page-load-balancing-webinars-slideshows #block-menu-menu-media .block-inner h2::first-letter,.page-load-balancing-webinars-slideshows #block-menu-menu-community .block-inner h2::first-letter{text-transform:uppercase;}
+.text-muted,.dropdown-menu>.disabled>a,.dropdown-menu>.disabled>a:hover,.dropdown-menu>.disabled>a:focus,.nav>li.disabled>a,.form-group.error .help-block,.form-group.error .help-inline,.form-group.has-error .help-block,.form-group.has-error .help-inline{color:#777;}
+.text-primary,.form-autocomplete .glyphicon.glyphicon-spin{color:#337ab7;}
+.text-success,.has-success .help-block,.has-success .control-label,.has-success .radio,.has-success .checkbox,.has-success .radio-inline,.has-success .checkbox-inline,.has-success.radio label,.has-success.checkbox label,.has-success.radio-inline label,.has-success.checkbox-inline label,.has-success .form-control-feedback{color:#3c763d;}
+a.text-success:hover,a.text-success:focus,.alert-success a,.alert-success a:hover,.alert-success a:focus{color:#2b542c;}
+a.text-info:hover,a.text-info:focus,.alert-info a,.alert-info a:hover,.alert-info a:focus{color:#245269;}
+.text-warning,.has-warning .help-block,.has-warning .control-label,.has-warning .radio,.has-warning .checkbox,.has-warning .radio-inline,.has-warning .checkbox-inline,.has-warning.radio label,.has-warning.checkbox label,.has-warning.radio-inline label,.has-warning.checkbox-inline label,.has-warning .form-control-feedback{color:#8a6d3b;}
+a.text-warning:hover,a.text-warning:focus,.alert-warning a,.alert-warning a:hover,.alert-warning a:focus{color:#66512c;}
+.text-danger,.has-error .help-block,.has-error .control-label,.has-error .radio,.has-error .checkbox,.has-error .radio-inline,.has-error .checkbox-inline,.has-error.radio label,.has-error.checkbox label,.has-error.radio-inline label,.has-error.checkbox-inline label,.has-error .form-control-feedback,.error{color:#a94442;}
+a.text-danger:hover,a.text-danger:focus,.alert-danger a,.alert-danger a:hover,.alert-danger a:focus{color:#843534;}
+.bg-primary,.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{color:#fff;background-color:#337ab7;}
+.bg-success,.table>thead>tr>td.success,.table>thead>tr>th.success,.table>thead>tr.success>td,.table>thead>tr.success>th,.table>tbody>tr>td.success,.table>tbody>tr>th.success,.table>tbody>tr.success>td,.table>tbody>tr.success>th,.table>tfoot>tr>td.success,.table>tfoot>tr>th.success,.table>tfoot>tr.success>td,.table>tfoot>tr.success>th{background-color:#dff0d8;}
+.bg-info,.table>thead>tr>td.info,.table>thead>tr>th.info,.table>thead>tr.info>td,.table>thead>tr.info>th,.table>tbody>tr>td.info,.table>tbody>tr>th.info,.table>tbody>tr.info>td,.table>tbody>tr.info>th,.table>tfoot>tr>td.info,.table>tfoot>tr>th.info,.table>tfoot>tr.info>td,.table>tfoot>tr.info>th{background-color:#d9edf7;}
+.bg-warning,.table>thead>tr>td.warning,.table>thead>tr>th.warning,.table>thead>tr.warning>td,.table>thead>tr.warning>th,.table>tbody>tr>td.warning,.table>tbody>tr>th.warning,.table>tbody>tr.warning>td,.table>tbody>tr.warning>th,.table>tfoot>tr>td.warning,.table>tfoot>tr>th.warning,.table>tfoot>tr.warning>td,.table>tfoot>tr.warning>th{background-color:#fcf8e3;}
+.bg-danger,.table>thead>tr>td.danger,.table>thead>tr>th.danger,.table>thead>tr.danger>td,.table>thead>tr.danger>th,.table>tbody>tr>td.danger,.table>tbody>tr>th.danger,.table>tbody>tr.danger>td,.table>tbody>tr.danger>th,.table>tfoot>tr>td.danger,.table>tfoot>tr>th.danger,.table>tfoot>tr.danger>td,.table>tfoot>tr.danger>th{background-color:#f2dede;}
+ul ul,ul ol,ol ul,ol ol,blockquote p:last-child,blockquote ul:last-child,blockquote ol:last-child,.panel>.table,.panel>.table-responsive>.table,.panel>.panel-collapse>.table,.navbar-search .control-group,.form-group:last-child,.panel:last-child,.text-format-wrapper>.form-type-textarea,.text-format-wrapper .filter-wrapper,.radio:last-child,.checkbox:last-child,body>header.no-margin,#confcall,.sticky-footer-nav.navbar .list-inline,.homepage-callout.bluetowhite .row p,.homepage-callout.bluetowhite .row p:last-child,.section .row:last-child p:last-child:not(.subhead),.node-type-video .field-name-body .row:last-child p:last-child:not(.subhead),.page-node-12937 #webform-client-form-12937{margin-bottom:0;}
+dt,.alert a,.book-toc>.dropdown-menu>li:nth-child(1)>a,.our-brand h2.black{font-weight:700;}
+dd,.col-xs-offset-0,.btn-group>.btn:first-child,.btn .caret,.modal-footer .btn-block+.btn-block{margin-left:0;}
+.dl-horizontal dd:before,.dl-horizontal dd:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after,.form-horizontal .form-group:before,.form-horizontal .form-group:after,.btn-toolbar:before,.btn-toolbar:after,.btn-group-vertical>.btn-group:before,.btn-group-vertical>.btn-group:after,.nav:before,.nav:after,.navbar:before,.navbar:after,.navbar-header:before,.navbar-header:after,.navbar-collapse:before,.navbar-collapse:after,.modal-header:before,.modal-header:after,.modal-footer:before,.modal-footer:after,.clearfix:before,.clearfix:after,body:not(.partner-portal) .top-ctas ul:before,body:not(.partner-portal) .top-ctas ul:after,body:not(.partner-portal) .region-top .block-menu ul:before,body:not(.partner-portal) .region-top .block-menu ul:after,body.partner-portal .top-ctas ul:before,body.partner-portal .top-ctas ul:after,body.partner-portal .region-top .block-menu ul:before,body.partner-portal .region-top .block-menu ul:after,.top-image .views-field-field-put-title-in-top-image .field-content:before,.top-image .views-field-field-put-title-in-top-image .field-content:after,.top-image .views-field-field-top-image-sub-text:before,.top-image .views-field-field-top-image-sub-text:after,#webform-client-form-11751 #webform-component-callout--schedule-callback:before,#webform-client-form-11751 #webform-component-callout--schedule-callback:after,#webform-client-form-10835 #webform-component-callout--schedule-callback:before,#webform-client-form-10835 #webform-component-callout--schedule-callback:after,#webform-client-form-13615 #webform-component-callout--schedule-callback:before,#webform-client-form-13615 #webform-component-callout--schedule-callback:after,#webform-client-form-13617 #webform-component-callout--schedule-callback:before,#webform-client-form-13617 #webform-component-callout--schedule-callback:after,.page-node-17231 .ss360-layer-content section:before,.page-node-17231 .ss360-layer-content section:after{content:" ";display:table;}
+.dl-horizontal dd:after,.container:after,.container-fluid:after,.row:after,.form-horizontal .form-group:after,.btn-toolbar:after,.btn-group-vertical>.btn-group:after,.nav:after,.navbar:after,.navbar-header:after,.navbar-collapse:after,.modal-header:after,.modal-footer:after,.clearfix:after,.form-actions,.form-type-password-confirm .help-block,body:not(.partner-portal) .top-ctas ul:after,body:not(.partner-portal) .region-top .block-menu ul:after,body.partner-portal .top-ctas ul:after,body.partner-portal .region-top .block-menu ul:after,.top-image .views-field-field-put-title-in-top-image .field-content:after,.top-image .views-field-field-top-image-sub-text:after,#webform-client-form-11751 #webform-component-callout--schedule-callback:after,#webform-client-form-10835 #webform-component-callout--schedule-callback:after,#webform-client-form-13615 #webform-component-callout--schedule-callback:after,#webform-client-form-13617 #webform-component-callout--schedule-callback:after,.page-node-17231 .ss360-layer-content section:after,.clear-both{clear:both;}
+.container,.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px;}
+.row,#webform-client-form-11751 #webform-component-callout--schedule-callback,#webform-client-form-10835 #webform-component-callout--schedule-callback,#webform-client-form-13615 #webform-component-callout--schedule-callback,#webform-client-form-13617 #webform-component-callout--schedule-callback{margin-left:-15px;margin-right:-15px;}
+.col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.col-md-2,.col-lg-2,.col-xs-3,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.col-sm-4,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.col-sm-12,.col-md-12,.col-lg-12,#webform-client-form-11751 #webform-component-promo,#webform-client-form-11751 #webform-component-partner-type-select,#webform-client-form-11751 #webform-component-update-partner,#webform-client-form-11751 #webform-component-distibutor-details,#webform-client-form-11751 #webform-component-partener-reseller-details,#webform-client-form-11751 #webform-component-distributor,#webform-client-form-11751 #webform-component-end-customer-details,#webform-client-form-11751 #webform-component-project-fieldset,#webform-client-form-11751 #webform-component-environment,#webform-client-form-11751 #webform-component-products,#webform-client-form-11751 #webform-component-functionality-required,#webform-client-form-11751 #webform-component-will-this-use-mela,#webform-client-form-10835 #webform-component-promo,#webform-client-form-10835 #webform-component-partner-type-select,#webform-client-form-10835 #webform-component-update-partner,#webform-client-form-10835 #webform-component-distibutor-details,#webform-client-form-10835 #webform-component-partener-reseller-details,#webform-client-form-10835 #webform-component-distributor,#webform-client-form-10835 #webform-component-end-customer-details,#webform-client-form-10835 #webform-component-project-fieldset,#webform-client-form-10835 #webform-component-environment,#webform-client-form-10835 #webform-component-products,#webform-client-form-10835 #webform-component-functionality-required,#webform-client-form-10835 #webform-component-will-this-use-mela,#webform-client-form-13615 #webform-component-promo,#webform-client-form-13615 #webform-component-partner-type-select,#webform-client-form-13615 #webform-component-update-partner,#webform-client-form-13615 #webform-component-distibutor-details,#webform-client-form-13615 #webform-component-partener-reseller-details,#webform-client-form-13615 #webform-component-distributor,#webform-client-form-13615 #webform-component-end-customer-details,#webform-client-form-13615 #webform-component-project-fieldset,#webform-client-form-13615 #webform-component-environment,#webform-client-form-13615 #webform-component-products,#webform-client-form-13615 #webform-component-functionality-required,#webform-client-form-13615 #webform-component-will-this-use-mela,#webform-client-form-13617 #webform-component-promo,#webform-client-form-13617 #webform-component-partner-type-select,#webform-client-form-13617 #webform-component-update-partner,#webform-client-form-13617 #webform-component-distibutor-details,#webform-client-form-13617 #webform-component-partener-reseller-details,#webform-client-form-13617 #webform-component-distributor,#webform-client-form-13617 #webform-component-end-customer-details,#webform-client-form-13617 #webform-component-project-fieldset,#webform-client-form-13617 #webform-component-environment,#webform-client-form-13617 #webform-component-products,#webform-client-form-13617 #webform-component-functionality-required,#webform-client-form-13617 #webform-component-will-this-use-mela,.page-node-17231 .ss360-group li{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12,.btn-toolbar .btn,.btn-toolbar .btn-group,.btn-toolbar .input-group,.btn-group>.btn-group,.nav-pills>li,ul.secondary,ul.pagination li>a.progress-disabled,body>header .top-menu .region-topnav>section{float:left;}
+.col-xs-12,input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"].btn-block,.btn-group-justified>.btn-group .btn,.nav-justified,.nav-tabs.nav-justified,.managed-files.table td:first-child,.filter-wrapper .form-type-select .filter-list,body>header .main-menu .navbar-collapse nav ul.menu.nav,.feature-thumb-well .thumb-well img{width:100%;}
+.col-xs-push-0,.btn-group-justified>.btn-group .dropdown-menu{left:auto;}
+.col-xs-push-12,.carousel-inner>.next,.carousel-inner>.active.right{left:100%;}
+table,body>header .main-menu .navbar-collapse nav ul.menu.nav>li>a:hover,body>header .main-menu .navbar-collapse nav ul.menu.nav>li a:focus,body>header .main-menu .navbar-collapse nav ul.menu.nav>li a:active,.tab-matrix #block-block-313 .nav-tabs li a:focus,.tab-matrix #block-block-314 .nav-tabs li a:focus,.minimal-nav li a:focus{background-color:transparent;}
+.table>thead>tr>th,.table>thead>tr>td,.table>tbody>tr>th,.table>tbody>tr>td,.table>tfoot>tr>th,.table>tfoot>tr>td,#ss360-results-container .panel-body .col-md-5 table td{line-height:1.428571429;vertical-align:top;border-top:1px solid #ddd;padding:8px;}
+.table>caption+thead>tr:first-child>th,.table>caption+thead>tr:first-child>td,.table>colgroup+thead>tr:first-child>th,.table>colgroup+thead>tr:first-child>td,.table>thead:first-child>tr:first-child>th,.table>thead:first-child>tr:first-child>td,.panel>.table>tbody:first-child>tr:first-child th,.panel>.table>tbody:first-child>tr:first-child td,.panel-group .panel-footer{border-top:0;}
+.table .table,.snapshot,.image-toggle-parent .image-toggle-buttons .image-toggler:hover,.tab-matrix .container .hold .tabbed-bottom-contain .table tr:last-of-type,.table-narrow tbody tr,.table-wide tbody tr,.table-long-text tbody tr,.card.flat-boxes,.card.colored.white .color-holder,.selector-panel li.active,#mela-trial-prog.webform-progressbar-wrapper-download.dark .webform-progressbar-outer .webform-progressbar-page{background-color:#fff;}
+.table-bordered,.table-bordered>thead>tr>th,.table-bordered>thead>tr>td,.table-bordered>tbody>tr>th,.table-bordered>tbody>tr>td,.table-bordered>tfoot>tr>th,.table-bordered>tfoot>tr>td,.nav-tabs-justified>.active>a,.nav-tabs.nav-justified>.active>a,.nav-tabs-justified>.active>a:hover,.nav-tabs.nav-justified>.active>a:hover,.nav-tabs-justified>.active>a:focus,.nav-tabs.nav-justified>.active>a:focus{border:1px solid #ddd;}
+.table-hover>tbody>tr:hover,.table>thead>tr>td.active,.table>thead>tr>th.active,.table>thead>tr.active>td,.table>thead>tr.active>th,.table>tbody>tr>td.active,.table>tbody>tr>th.active,.table>tbody>tr.active>td,.table>tbody>tr.active>th,.table>tfoot>tr>td.active,.table>tfoot>tr>th.active,.table>tfoot>tr.active>td,.table>tfoot>tr.active>th{background-color:#f5f5f5;}
+input[type="file"],.collapse.in,.open>.dropdown-menu,.tab-content>.active,.navbar-brand>img,.carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev,.panel-heading,.form-type-password-confirm label,div.image-style-new,div.image-style-new div,body>header .top-menu .secondary li:hover .menu-attach-block-wrapper #block-block-221,body>header .top-menu .region-topnav #block-block-278,.selector-tabs #toptabs>li.active,#webform-client-form-11751 #webform-component-partner-type-select #edit-submitted-partner-type-select label,#webform-client-form-10835 #webform-component-partner-type-select #edit-submitted-partner-type-select label,#webform-client-form-13615 #webform-component-partner-type-select #edit-submitted-partner-type-select label,#webform-client-form-13617 #webform-component-partner-type-select #edit-submitted-partner-type-select label,#webform-client-form-11751 #webform-component-end-customer-details--expected-closing-date .webform-container-inline.webform-datepicker .form-item,#webform-client-form-10835 #webform-component-end-customer-details--expected-closing-date .webform-container-inline.webform-datepicker .form-item,#webform-client-form-13615 #webform-component-end-customer-details--expected-closing-date .webform-container-inline.webform-datepicker .form-item,#webform-client-form-13617 #webform-component-end-customer-details--expected-closing-date .webform-container-inline.webform-datepicker .form-item,#webform-client-form-11751 #webform-component-environment--environment-col-6 label,#webform-client-form-10835 #webform-component-environment--environment-col-6 label,#webform-client-form-13615 #webform-component-environment--environment-col-6 label,#webform-client-form-13617 #webform-component-environment--environment-col-6 label,.btn.stretch{display:block;}
+input[type="range"],.btn-block{display:block;width:100%;}
+select[multiple],select[size],textarea.form-control,textarea.input-sm,.input-group-sm>textarea.form-control,.input-group-sm>textarea.input-group-addon,.input-group-sm>.input-group-btn>textarea.btn,select[multiple].input-sm,.input-group-sm>select[multiple].form-control,.input-group-sm>select[multiple].input-group-addon,.input-group-sm>.input-group-btn>select[multiple].btn,.form-group-sm textarea.form-control,.form-group-sm select[multiple].form-control,textarea.input-lg,.input-group-lg>textarea.form-control,.input-group-lg>textarea.input-group-addon,.input-group-lg>.input-group-btn>textarea.btn,select[multiple].input-lg,.input-group-lg>select[multiple].form-control,.input-group-lg>select[multiple].input-group-addon,.input-group-lg>.input-group-btn>select[multiple].btn,.form-group-lg textarea.form-control,.form-group-lg select[multiple].form-control{height:auto;}
+.form-control:-ms-input-placeholder,.form-control::-webkit-input-placeholder{color:#999;}
+.form-control[disabled],fieldset[disabled] .form-control,input[type="radio"][disabled],input[type="radio"].disabled,fieldset[disabled] input[type="radio"],input[type="checkbox"][disabled],input[type="checkbox"].disabled,fieldset[disabled] input[type="checkbox"],.radio-inline.disabled,fieldset[disabled] .radio-inline,.checkbox-inline.disabled,fieldset[disabled] .checkbox-inline,.radio.disabled label,fieldset[disabled] .radio label,.checkbox.disabled label,fieldset[disabled] .checkbox label{cursor:not-allowed;}
+.form-group,.text-format-wrapper{margin-bottom:15px;}
+.input-sm,.input-group-sm>.form-control,.input-group-sm>.input-group-addon,.input-group-sm>.input-group-btn>.btn,.form-group-sm .form-control{height:30px;font-size:12px;line-height:1.5;border-radius:3px;padding:5px 10px;}
+select.input-sm,.input-group-sm>select.form-control,.input-group-sm>select.input-group-addon,.input-group-sm>.input-group-btn>select.btn,.form-group-sm select.form-control{height:30px;line-height:30px;}
+.input-lg,.input-group-lg>.form-control,.input-group-lg>.input-group-addon,.input-group-lg>.input-group-btn>.btn,.form-group-lg .form-control{height:46px;font-size:18px;line-height:1.3333333;border-radius:6px;padding:10px 16px;}
+select.input-lg,.input-group-lg>select.form-control,.input-group-lg>select.input-group-addon,.input-group-lg>.input-group-btn>select.btn,.form-group-lg select.form-control{height:46px;line-height:46px;}
+.has-feedback,.dropup,.dropdown,.input-group-btn>.btn,.carousel,.form-type-password-confirm,body>header .top-menu .secondary li,body>header .main-menu .navbar-collapse .icon-holder .block-kt-blocks .call-to-action-link a[data-badge],.image-accent,.search,.page-node-12937 #webform-client-form-12937 #webform-component-markup .platforms>.deployment-option:hover .well .imghold,.page-node-12937 #webform-client-form-12937 #webform-component-markup .platforms>.deployment-option:hover .side-by-side-forms .block-webform:first-of-type .block-inner .imghold,.side-by-side-forms .block-webform:first-of-type .page-node-12937 #webform-client-form-12937 #webform-component-markup .platforms>.deployment-option:hover .block-inner .imghold{position:relative;}
+.has-feedback label.sr-only~.form-control-feedback,.page-node-3053 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-3440 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-591 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-3037 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-3038 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-3039 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-3040 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-4785 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-3043 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-3044 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-6513 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-3045 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-4153 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-3047 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-4256 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-4365 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-4468 .top-image .views-field-field-top-image-sub-text #top-image-sub-text,.page-node-4674 .top-image .views-field-field-top-image-sub-text #top-image-sub-text{top:0;}
+.form-horizontal .has-feedback .form-control-feedback,.form-type-password-confirm .form-control-feedback{right:15px;}
+.btn-primary .badge,.panel-primary>.panel-heading .badge{color:#337ab7;background-color:#fff;}
+.btn-link,.btn-link:hover,.btn-link:focus,.btn-link:active,.btn.btn-inverse.disabled,.btn.btn-link.disabled,.front>header .btn-primary.inverse.disabled,.bright-header>header .btn-primary.inverse.disabled,body:not(.dark-header)>header .btn-primary.inverse.disabled{border-color:transparent;}
+.btn-block+.btn-block,.panel-group .panel+.panel,body>header .main-menu .navbar-toggle .icon-bar+.icon-bar{margin-top:5px;}
+.fade.in,.carousel-fade .carousel-inner .active,.carousel-fade .carousel-inner .next.left,.carousel-fade .carousel-inner .prev.right,#large-carousel .carousel-control.left:hover,#large-carousel .carousel-control.left:focus,#large-carousel .carousel-control.right:hover,#large-carousel .carousel-control.right:focus{opacity:1;}
+.collapse,.tab-content>.tab-pane,.tab-pane>.panel-heading,body.logged-in .main-menu #block-menu-menu-grand-main-menu ul.menu.nav>li:nth-of-type(5) li a[href*="sso.kemp.ax"],.region-top .block-menu h2.block-title,.node-type-case .field-name-field-image,.selector-tabs #toptabs>li,.tab-matrix #block-block-284 .demo-cta,.tab-matrix #block-block-284 .try360,.tab-matrix #compares,.tab-matrix #reset,.tab-matrix .models,#webform-client-form-11751 #edit-next--2,#webform-client-form-10835 #edit-next--2,#webform-client-form-13615 #edit-next--2,#webform-client-form-13617 #edit-next--2,#webform-client-form-11751 #webform-component-partner-type-select label>input,#webform-client-form-10835 #webform-component-partner-type-select label>input,#webform-client-form-13615 #webform-component-partner-type-select label>input,#webform-client-form-13617 #webform-component-partner-type-select label>input,#webform-client-form-11751 label[for=edit-submitted-functionality-required-addons],#webform-client-form-10835 label[for=edit-submitted-functionality-required-addons],#webform-client-form-13615 label[for=edit-submitted-functionality-required-addons],#webform-client-form-13617 label[for=edit-submitted-functionality-required-addons],.node-type-partner .field-name-field-category,.node-type-case .field-name-field-top-image,.node-type-video .field-name-field-vid-category,.node-type-video .field-name-field-content-category,.node-type-video .field-name-field-sub-title,.node-type-product .field-name-field-vid-category,.node-type-product .field-name-field-content-category,.node-type-product .field-name-field-sub-title,.node-type-case .field-name-field-vid-category,.node-type-case .field-name-field-content-category,.node-type-case .field-name-field-sub-title,.node-type-white-paper .field-name-field-image-700x300,.node-type-white-paper .field-name-field-tags,.node-type-link .field-name-field-image-700x300,.node-type-link .field-name-field-tags,.node-type-review .field-name-field-image-700x300,.node-type-review .field-name-field-tags,.field-name-field-bff,.field-name-field-content-category,#ss360IndexFilters,.field-name-field-top-image,.field-name-field-language,.field-name-field-industries,.field-name-field-region,.field-name-field-company-location,#ss360-filter-territory,#ss360-filter-industry,#ss360-filter-category,#ss360-filter-region,#ss360-filter-language,.case-study-search #searchBoxCases,.case-study-search h2#ss360-search-result-heading,.case-study-search h3#ss360-heading-case_studies,.page-node-17231 .ss360-content-container,.page-node-17231 h2#ss360-search-result-heading,.page-node-17231 .ss360-layer-content .ss360-more-results,.page-node-17233 .field-name-field-feature,.page-node-17233 .field-name-field-product-used,.page-node-17233 .field-name-field-workload,.webform-progressbar-wrapper-download .webform-progressbar-page-number,#views-exposed-form-voice-of-the-kemp-customer-page .views-exposed-form button#edit-submit-voice-of-the-kemp-customer,.page-node-12937 #webform-client-form-12937 .filled-form-before,.page-node-12937 #webform-client-form-12937 #webform-component-i-agree-to-the-terms>label.control-label{display:none;}
+.dropdown-toggle:focus,.open>a,.btn-group .dropdown-toggle:active,.btn-group.open .dropdown-toggle,.tabs-left>.nav-tabs>li:focus,.tabs-right>.nav-tabs>li:focus,.tabs-left>.nav-tabs>li>a:focus,.tabs-right>.nav-tabs>li>a:focus{outline:0;}
+.dropdown-menu.pull-right,.pull-right>.dropdown-menu{right:0;left:auto;}
+.dropdown-menu .divider,.nav .nav-divider{height:1px;overflow:hidden;background-color:#e5e5e5;margin:9px 0;}
+.btn-group>.btn:hover,.btn-group>.btn:focus,.btn-group>.btn:active,.btn-group>.btn.active,.btn-group-vertical>.btn:hover,.btn-group-vertical>.btn:focus,.btn-group-vertical>.btn:active,.btn-group-vertical>.btn.active,.input-group-btn>.btn:hover,.input-group-btn>.btn:focus,.input-group-btn>.btn:active,.carousel-fade .carousel-control{z-index:2;}
+.btn-group .btn+.btn,.btn-group .btn+.btn-group,.btn-group .btn-group+.btn,.btn-group .btn-group+.btn-group,.input-group-btn>.btn+.btn,.modal-footer .btn-group .btn+.btn{margin-left:-1px;}
+.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle),.btn-group>.btn-group:not(:first-child):not(:last-child)>.btn,.btn-group-vertical>.btn:not(:first-child):not(:last-child),.btn-group-vertical>.btn-group:not(:first-child):not(:last-child)>.btn,.input-group-addon:not(:first-child):not(:last-child),.input-group-btn:not(:first-child):not(:last-child),.input-group .form-control:not(:first-child):not(:last-child){border-radius:0;}
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle),.btn-group>.btn-group:first-child:not(:last-child)>.btn:last-child,.btn-group>.btn-group:first-child:not(:last-child)>.dropdown-toggle,.input-group .form-control:first-child,.input-group-addon:first-child,.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group>.btn,.input-group-btn:first-child>.dropdown-toggle,.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle),.input-group-btn:last-child>.btn-group:not(:last-child)>.btn{border-bottom-right-radius:0;border-top-right-radius:0;}
+.btn-group>.btn:last-child:not(:first-child),.btn-group>.dropdown-toggle:not(:first-child),.btn-group>.btn-group:last-child:not(:first-child)>.btn:first-child,.input-group .form-control:last-child,.input-group-addon:last-child,.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group>.btn,.input-group-btn:last-child>.dropdown-toggle,.input-group-btn:first-child>.btn:not(:first-child),.input-group-btn:first-child>.btn-group:not(:first-child)>.btn{border-bottom-left-radius:0;border-top-left-radius:0;}
+.btn-group.open .dropdown-toggle.btn-link,body #toolbar,body #admin-menu,body #admin-toolbar{-webkit-box-shadow:none;box-shadow:none;}
+.btn-group-vertical>.btn-group>.btn,.nav-stacked>li,.nav-justified>li,.nav-tabs.nav-justified>li,.tabs-left>.nav-tabs>li,.tabs-right>.nav-tabs>li{float:none;}
+.input-group-addon,.input-group-btn,.input-group .form-control,th.checkbox,td.checkbox,th.radio,td.radio{display:table-cell;}
+.input-group-addon input[type="radio"],.input-group-addon input[type="checkbox"],.region-sidebar-first .block:first-child h2.block-title,.region-sidebar-second .block:first-child h2.block-title,.radio:first-child,.checkbox:first-child,fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox],div.features-export-list .form-type-checkbox input[type=checkbox],.feature-case-boxes .clean-well h3,#webform-client-form-11751 #webform-component-partner-type-select #edit-submitted-partner-type-select partner-type-select.form-type-radio.radio.btngr,#webform-client-form-10835 #webform-component-partner-type-select #edit-submitted-partner-type-select partner-type-select.form-type-radio.radio.btngr,#webform-client-form-13615 #webform-component-partner-type-select #edit-submitted-partner-type-select partner-type-select.form-type-radio.radio.btngr,#webform-client-form-13617 #webform-component-partner-type-select #edit-submitted-partner-type-select partner-type-select.form-type-radio.radio.btngr,.stack-points h5{margin-top:0;}
+.input-group-addon:first-child,.panel>.table-bordered>thead>tr>th:last-child,.panel>.table-bordered>thead>tr>td:last-child,.panel>.table-bordered>tbody>tr>th:last-child,.panel>.table-bordered>tbody>tr>td:last-child,.panel>.table-bordered>tfoot>tr>th:last-child,.panel>.table-bordered>tfoot>tr>td:last-child,.panel>.table-responsive>.table-bordered>thead>tr>th:last-child,.panel>.table-responsive>.table-bordered>thead>tr>td:last-child,.panel>.table-responsive>.table-bordered>tbody>tr>th:last-child,.panel>.table-responsive>.table-bordered>tbody>tr>td:last-child,.panel>.table-responsive>.table-bordered>tfoot>tr>th:last-child,.panel>.table-responsive>.table-bordered>tfoot>tr>td:last-child{border-right:0;}
+.input-group-addon:last-child,.panel>.table-bordered>thead>tr>th:first-child,.panel>.table-bordered>thead>tr>td:first-child,.panel>.table-bordered>tbody>tr>th:first-child,.panel>.table-bordered>tbody>tr>td:first-child,.panel>.table-bordered>tfoot>tr>th:first-child,.panel>.table-bordered>tfoot>tr>td:first-child,.panel>.table-responsive>.table-bordered>thead>tr>th:first-child,.panel>.table-responsive>.table-bordered>thead>tr>td:first-child,.panel>.table-responsive>.table-bordered>tbody>tr>th:first-child,.panel>.table-responsive>.table-bordered>tbody>tr>td:first-child,.panel>.table-responsive>.table-bordered>tfoot>tr>th:first-child,.panel>.table-responsive>.table-bordered>tfoot>tr>td:first-child{border-left:0;}
+.nav-tabs-justified,.nav-tabs.nav-justified,.panel>.table-bordered>thead>tr:first-child>td,.panel>.table-bordered>thead>tr:first-child>th,.panel>.table-bordered>tbody>tr:first-child>td,.panel>.table-bordered>tbody>tr:first-child>th,.panel>.table-responsive>.table-bordered>thead>tr:first-child>td,.panel>.table-responsive>.table-bordered>thead>tr:first-child>th,.panel>.table-responsive>.table-bordered>tbody>tr:first-child>td,.panel>.table-responsive>.table-bordered>tbody>tr:first-child>th,.panel>.table-bordered>tbody>tr:last-child>td,.panel>.table-bordered>tbody>tr:last-child>th,.panel>.table-bordered>tfoot>tr:last-child>td,.panel>.table-bordered>tfoot>tr:last-child>th,.panel>.table-responsive>.table-bordered>tbody>tr:last-child>td,.panel>.table-responsive>.table-bordered>tbody>tr:last-child>th,.panel>.table-responsive>.table-bordered>tfoot>tr:last-child>td,.panel>.table-responsive>.table-bordered>tfoot>tr:last-child>th,.panel-group .panel-heading,.tabs-below>.nav-tabs,.tabs-left>.nav-tabs,.tabs-right>.nav-tabs{border-bottom:0;}
+.navbar-brand:hover,.navbar-brand:focus,fieldset .panel-heading a.panel-title:hover,.selector-tabs #toptabs>li.active a:hover,.selector-tabs #toptabs>li.active a:active{text-decoration:none;}
+.panel>.panel-body+.table,.panel>.panel-body+.table-responsive,.panel>.table+.panel-body,.panel>.table-responsive+.panel-body,.panel-group .panel-heading+.panel-collapse>.panel-body,.panel-group .panel-heading+.panel-collapse>.list-group,.tabs-below>.nav-tabs{border-top:1px solid #ddd;}
+.panel-group,.tabbable,.feature-case-boxes .x{margin-bottom:20px;}
+.modal-open,.region-help .block,.book-toc>.dropdown-menu,.vlm-promo.nav-tabs li a,.half-and-half .row{overflow:hidden;}
+.popover.bottom,#ss360-layer button{margin-top:10px;}
+.carousel-inner,.card.poster{position:relative;overflow:hidden;width:100%;}
+.carousel-inner>.active,.carousel-inner>.next.left,.carousel-inner>.prev.right{left:0;}
+.carousel-inner>.prev,.carousel-inner>.active.left{left:-100%;}
+.hide,.hidden,.visible-xs,.visible-sm,.visible-md,.visible-lg,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-print,.visible-print-block,.visible-print-inline,.visible-print-inline-block{display:none!important;}
+.invisible,#webform-client-form-11751 #webform-component-end-customer-details--expected-closing-date td.ui-datepicker-week-end,#webform-client-form-10835 #webform-component-end-customer-details--expected-closing-date td.ui-datepicker-week-end,#webform-client-form-13615 #webform-component-end-customer-details--expected-closing-date td.ui-datepicker-week-end,#webform-client-form-13617 #webform-component-end-customer-details--expected-closing-date td.ui-datepicker-week-end,.page-node-3053 .views-field-field-top-image img,.page-node-3440 .views-field-field-top-image img,.page-node-591 .views-field-field-top-image img,.page-node-3037 .views-field-field-top-image img,.page-node-3038 .views-field-field-top-image img,.page-node-3039 .views-field-field-top-image img,.page-node-3040 .views-field-field-top-image img,.page-node-4785 .views-field-field-top-image img,.page-node-3043 .views-field-field-top-image img,.page-node-3044 .views-field-field-top-image img,.page-node-6513 .views-field-field-top-image img,.page-node-3045 .views-field-field-top-image img,.page-node-4153 .views-field-field-top-image img,.page-node-3047 .views-field-field-top-image img,.page-node-4256 .views-field-field-top-image img,.page-node-4365 .views-field-field-top-image img,.page-node-4468 .views-field-field-top-image img,.page-node-4674 .views-field-field-top-image img{visibility:hidden;}
+body div#admin-toolbar,#toolbar{z-index:1600;}
+.navbar.container,.navbar.container-fluid,#ss360-layer .ss360-layer-content{margin-top:20px;}
+.navbar #block-search-form .input-group-btn,body>header .top-menu .region-topnav #block-block-278 .search .input-group .btn-wrap{width:auto;}
+table.sticky-header,.tab-matrix .container .hold .tabbed-top-contain .sticky-hold.opaque{z-index:1;}
+.filter-wrapper,.tabs-below>.nav-tabs>li>a{border-radius:0 0 4px 4px;}
+.form-group.error,.form-group.has-error,body>header .top-menu .secondary li .open a,body>header .top-menu .secondary li .open a:hover,body>header .top-menu .secondary li .open a:focus{background:none;}
+.book-toc>.dropdown-menu .dropdown-menu>li,#features-filter .form-item.form-type-checkbox{padding-left:20px;}
+.clear-style-form h1,.clear-style-form .h1,body>header .main-menu .navbar-collapse ul.menu li a:not(.btn):hover,body>header .main-menu .navbar-collapse ul.menu li span.nolink:hover,body.not-front.dark-header header#page-header .field-name-field-top-image-sub-text p,.card h3>a,body.front h1{color:#333334;}
+
+.table-narrow .row-header,.table-wide .row-header,.table-long-text .row-header,.card.pale-cyan{background-color:#e4f5fd;}
+.table-jambalaya tr:not(.divider):not(.text) td,.card .card-footer{border-top:1px solid #eaebec;}
+.table-jambalaya tr.divider td .div-cell:last-of-type,.table-jambalaya tr.text>td>.row .list-hold:last-of-type{border-left:1px solid rgba(187,189,191,0.5);}
+.purple-gradient a:not(.btn),.deep-grey-gradient a:not(.btn),.card.poster .card-body a:not(.btn),.section.waves a:not(.btn),.node-type-video .waves.field-name-body a:not(.btn),.section.deep-grey a:not(.btn),.node-type-video .deep-grey.field-name-body a:not(.btn){color:#fec10d!important;}
+.fa.fa-meetup,.fa.fa-facebook-square,.fa.fa-twitter-square,.fa.fa-linkedin-square,.fa.fa-github-square,.fa.fa-facebook,.fa.fa-twitter,.fa.fa-facebook-f,.fa.fa-github,.fa.fa-google-plus,.fa.fa-google-plus-square,.fa.fa-pinterest,.fa.fa-pinterest-square,.fa.fa-linkedin,.fa.fa-github-alt,.fa.fa-css3,.fa.fa-html5,.fa.fa-maxcdn,.fa.fa-bitcoin,.fa.fa-btc,.fa.fa-xing,.fa.fa-xing-square,.fa.fa-youtube,.fa.fa-youtube-play,.fa.fa-youtube-square,.fa.fa-adn,.fa.fa-bitbucket,.fa.fa-bitbucket-square,.fa.fa-dropbox,.fa.fa-flickr,.fa.fa-instagram,.fa.fa-stack-overflow,.fa.fa-tumblr,.fa.fa-tumblr-square,.fa.fa-android,.fa.fa-apple,.fa.fa-dribbble,.fa.fa-foursquare,.fa.fa-gittip,.fa.fa-gratipay,.fa.fa-linux,.fa.fa-skype,.fa.fa-trello,.fa.fa-windows,.fa.fa-pagelines,.fa.fa-renren,.fa.fa-stack-exchange,.fa.fa-vk,.fa.fa-weibo,.fa.fa-vimeo-square,.fa.fa-openid,.fa.fa-slack,.fa.fa-wordpress,.fa.fa-delicious,.fa.fa-digg,.fa.fa-drupal,.fa.fa-google,.fa.fa-joomla,.fa.fa-pied-piper-alt,.fa.fa-pied-piper-pp,.fa.fa-reddit,.fa.fa-reddit-square,.fa.fa-stumbleupon,.fa.fa-stumbleupon-circle,.fa.fa-yahoo,.fa.fa-behance,.fa.fa-behance-square,.fa.fa-steam,.fa.fa-steam-square,.fa.fa-deviantart,.fa.fa-soundcloud,.fa.fa-codepen,.fa.fa-jsfiddle,.fa.fa-vine,.fa.fa-ra,.fa.fa-rebel,.fa.fa-resistance,.fa.fa-empire,.fa.fa-ge,.fa.fa-git,.fa.fa-git-square,.fa.fa-hacker-news,.fa.fa-y-combinator-square,.fa.fa-yc-square,.fa.fa-qq,.fa.fa-tencent-weibo,.fa.fa-wechat,.fa.fa-weixin,.fa.fa-slideshare,.fa.fa-twitch,.fa.fa-yelp,.fa.fa-cc-amex,.fa.fa-cc-discover,.fa.fa-cc-mastercard,.fa.fa-cc-paypal,.fa.fa-cc-stripe,.fa.fa-cc-visa,.fa.fa-google-wallet,.fa.fa-paypal,.fa.fa-angellist,.fa.fa-ioxhost,.fa.fa-lastfm,.fa.fa-lastfm-square,.fa.fa-meanpath,.fa.fa-buysellads,.fa.fa-connectdevelop,.fa.fa-dashcube,.fa.fa-forumbee,.fa.fa-leanpub,.fa.fa-sellsy,.fa.fa-shirtsinbulk,.fa.fa-simplybuilt,.fa.fa-skyatlas,.fa.fa-facebook-official,.fa.fa-pinterest-p,.fa.fa-whatsapp,.fa.fa-medium,.fa.fa-viacoin,.fa.fa-y-combinator,.fa.fa-yc,.fa.fa-expeditedssl,.fa.fa-opencart,.fa.fa-optin-monster,.fa.fa-cc-diners-club,.fa.fa-cc-jcb,.fa.fa-chrome,.fa.fa-creative-commons,.fa.fa-firefox,.fa.fa-get-pocket,.fa.fa-gg,.fa.fa-gg-circle,.fa.fa-internet-explorer,.fa.fa-odnoklassniki,.fa.fa-odnoklassniki-square,.fa.fa-opera,.fa.fa-safari,.fa.fa-tripadvisor,.fa.fa-wikipedia-w,.fa.fa-500px,.fa.fa-amazon,.fa.fa-contao,.fa.fa-houzz,.fa.fa-vimeo,.fa.fa-black-tie,.fa.fa-edge,.fa.fa-fonticons,.fa.fa-reddit-alien,.fa.fa-codiepie,.fa.fa-fort-awesome,.fa.fa-mixcloud,.fa.fa-modx,.fa.fa-product-hunt,.fa.fa-scribd,.fa.fa-usb,.fa.fa-bluetooth,.fa.fa-bluetooth-b,.fa.fa-envira,.fa.fa-gitlab,.fa.fa-wheelchair-alt,.fa.fa-wpbeginner,.fa.fa-wpforms,.fa.fa-glide,.fa.fa-glide-g,.fa.fa-first-order,.fa.fa-google-plus-official,.fa.fa-pied-piper,.fa.fa-snapchat,.fa.fa-snapchat-ghost,.fa.fa-snapchat-square,.fa.fa-themeisle,.fa.fa-viadeo,.fa.fa-viadeo-square,.fa.fa-yoast,.fa.fa-google-plus-circle,.fa.fa-fa,.fa.fa-font-awesome,.fa.fa-linode,.fa.fa-free-code-camp,.fa.fa-quora,.fa.fa-telegram,.fa.fa-bandcamp,.fa.fa-eercast,.fa.fa-etsy,.fa.fa-grav,.fa.fa-imdb,.fa.fa-ravelry,.fa.fa-spotify,.fa.fa-superpowers,.fa.fa-wpexplorer{font-family:"Font Awesome 5 Brands";font-weight:400;}
+.fa.fa-star-o,.fa.fa-trash-o,.fa.fa-file-o,.fa.fa-clock-o,.fa.fa-arrow-circle-o-down,.fa.fa-arrow-circle-o-up,.fa.fa-play-circle-o,.fa.fa-list-alt,.fa.fa-picture-o,.fa.fa-photo,.fa.fa-image,.fa.fa-pencil-square-o,.fa.fa-share-square-o,.fa.fa-check-square-o,.fa.fa-times-circle-o,.fa.fa-check-circle-o,.fa.fa-eye,.fa.fa-eye-slash,.fa.fa-bar-chart,.fa.fa-bar-chart-o,.fa.fa-thumbs-o-up,.fa.fa-thumbs-o-down,.fa.fa-heart-o,.fa.fa-lemon-o,.fa.fa-square-o,.fa.fa-bookmark-o,.fa.fa-credit-card,.fa.fa-hdd-o,.fa.fa-hand-o-right,.fa.fa-hand-o-left,.fa.fa-hand-o-up,.fa.fa-hand-o-down,.fa.fa-files-o,.fa.fa-floppy-o,.fa.fa-money,.fa.fa-comment-o,.fa.fa-comments-o,.fa.fa-clipboard,.fa.fa-paste,.fa.fa-lightbulb-o,.fa.fa-bell-o,.fa.fa-file-text-o,.fa.fa-building-o,.fa.fa-hospital-o,.fa.fa-circle-o,.fa.fa-folder-o,.fa.fa-folder-open-o,.fa.fa-smile-o,.fa.fa-frown-o,.fa.fa-meh-o,.fa.fa-keyboard-o,.fa.fa-flag-o,.fa.fa-star-half-o,.fa.fa-star-half-empty,.fa.fa-star-half-full,.fa.fa-calendar-o,.fa.fa-minus-square-o,.fa.fa-compass,.fa.fa-caret-square-o-down,.fa.fa-toggle-down,.fa.fa-caret-square-o-up,.fa.fa-toggle-up,.fa.fa-caret-square-o-right,.fa.fa-toggle-right,.fa.fa-sun-o,.fa.fa-moon-o,.fa.fa-arrow-circle-o-right,.fa.fa-arrow-circle-o-left,.fa.fa-caret-square-o-left,.fa.fa-toggle-left,.fa.fa-dot-circle-o,.fa.fa-plus-square-o,.fa.fa-envelope-o,.fa.fa-file-pdf-o,.fa.fa-file-word-o,.fa.fa-file-excel-o,.fa.fa-file-powerpoint-o,.fa.fa-file-image-o,.fa.fa-file-photo-o,.fa.fa-file-picture-o,.fa.fa-file-archive-o,.fa.fa-file-zip-o,.fa.fa-file-audio-o,.fa.fa-file-sound-o,.fa.fa-file-video-o,.fa.fa-file-movie-o,.fa.fa-file-code-o,.fa.fa-life-bouy,.fa.fa-life-ring,.fa.fa-life-buoy,.fa.fa-life-saver,.fa.fa-support,.fa.fa-paper-plane-o,.fa.fa-send-o,.fa.fa-circle-thin,.fa.fa-futbol-o,.fa.fa-soccer-ball-o,.fa.fa-newspaper-o,.fa.fa-bell-slash-o,.fa.fa-copyright,.fa.fa-cc,.fa.fa-diamond,.fa.fa-object-group,.fa.fa-object-ungroup,.fa.fa-sticky-note-o,.fa.fa-clone,.fa.fa-hourglass-o,.fa.fa-hand-rock-o,.fa.fa-hand-grab-o,.fa.fa-hand-paper-o,.fa.fa-hand-stop-o,.fa.fa-hand-scissors-o,.fa.fa-hand-lizard-o,.fa.fa-hand-spock-o,.fa.fa-hand-pointer-o,.fa.fa-hand-peace-o,.fa.fa-registered,.fa.fa-calendar-plus-o,.fa.fa-calendar-minus-o,.fa.fa-calendar-times-o,.fa.fa-calendar-check-o,.fa.fa-map-o,.fa.fa-commenting,.fa.fa-commenting-o,.fa.fa-pause-circle-o,.fa.fa-stop-circle-o,.fa.fa-question-circle-o,.fa.fa-handshake-o,.fa.fa-envelope-open-o,.fa.fa-address-book-o,.fa.fa-address-card-o,.fa.fa-vcard-o,.fa.fa-user-circle-o,.fa.fa-user-o,.fa.fa-id-badge,.fa.fa-id-card-o,.fa.fa-drivers-license-o,.fa.fa-window-maximize,.fa.fa-window-restore,.fa.fa-window-close-o,.fa.fa-times-rectangle-o,.fa.fa-snowflake-o{font-family:"Font Awesome 5 Pro";font-weight:400;}
+.fa.fa-trash-o:before,.fa.fa-trash:before{content:"\f2ed";}
+.fa.fa-picture-o:before,.fa.fa-photo:before,.fa.fa-image:before{content:"\f03e";}
+.fa.fa-bar-chart:before,.fa.fa-bar-chart-o:before{content:"\f080";}
+.fa.fa-facebook:before,.fa.fa-facebook-f:before{content:"\f39e";}
+.fa.fa-file-text-o:before,.fa.fa-file-text:before{content:"\f15c";}
+.fa.fa-circle-o:before,.fa.fa-circle-thin:before{content:"\f111";}
+.fa.fa-star-half-o:before,.fa.fa-star-half-empty:before,.fa.fa-star-half-full:before{content:"\f089";}
+.fa.fa-caret-square-o-down:before,.fa.fa-toggle-down:before{content:"\f150";}
+.fa.fa-caret-square-o-up:before,.fa.fa-toggle-up:before{content:"\f151";}
+.fa.fa-caret-square-o-right:before,.fa.fa-toggle-right:before{content:"\f152";}
+.fa.fa-caret-square-o-left:before,.fa.fa-toggle-left:before{content:"\f191";}
+.fa.fa-file-image-o:before,.fa.fa-file-photo-o:before,.fa.fa-file-picture-o:before{content:"\f1c5";}
+.fa.fa-file-archive-o:before,.fa.fa-file-zip-o:before{content:"\f1c6";}
+.fa.fa-file-audio-o:before,.fa.fa-file-sound-o:before{content:"\f1c7";}
+.fa.fa-file-video-o:before,.fa.fa-file-movie-o:before{content:"\f1c8";}
+.fa.fa-life-bouy:before,.fa.fa-life-buoy:before,.fa.fa-life-saver:before,.fa.fa-support:before{content:"\f1cd";}
+.fa.fa-ra:before,.fa.fa-resistance:before{content:"\f1d0";}
+.fa.fa-y-combinator-square:before,.fa.fa-yc-square:before{content:"\f1d4";}
+.fa.fa-send:before,.fa.fa-paper-plane-o:before,.fa.fa-send-o:before{content:"\f1d8";}
+.fa.fa-futbol-o:before,.fa.fa-soccer-ball-o:before{content:"\f1e3";}
+.fa.fa-meanpath:before,.fa.fa-fa:before{content:"\f2b4";}
+.fa.fa-hand-rock-o:before,.fa.fa-hand-grab-o:before{content:"\f255";}
+.fa.fa-hand-paper-o:before,.fa.fa-hand-stop-o:before{content:"\f256";}
+.fa.fa-commenting:before,.fa.fa-commenting-o:before{content:"\f4ad";}
+.fa.fa-google-plus-official:before,.fa.fa-google-plus-circle:before{content:"\f2b3";}
+.fa.fa-vcard:before,.fa.fa-address-card-o:before,.fa.fa-vcard-o:before{content:"\f2bb";}
+.fa.fa-drivers-license:before,.fa.fa-id-card-o:before,.fa.fa-drivers-license-o:before{content:"\f2c2";}
+.fa.fa-times-rectangle:before,.fa.fa-window-close-o:before,.fa.fa-times-rectangle-o:before{content:"\f410";}
+@media min-width768px {
+.lead{font-size:24px;}
+.dl-horizontal dt{float:left;width:160px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.dl-horizontal dd{margin-left:180px;}
+.container{width:750px;}
+.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{float:left;}
+.col-sm-1{width:8.3333333333%;}
+.col-sm-2{width:16.6666666667%;}
+.col-sm-3{width:25%;}
+.col-sm-4{width:33.3333333333%;}
+.col-sm-5{width:41.6666666667%;}
+.col-sm-6{width:50%;}
+.col-sm-7{width:58.3333333333%;}
+.col-sm-8{width:66.6666666667%;}
+.col-sm-9{width:75%;}
+.col-sm-10{width:83.3333333333%;}
+.col-sm-11{width:91.6666666667%;}
+.col-sm-pull-0{right:auto;}
+.col-sm-pull-1{right:8.3333333333%;}
+.col-sm-pull-2{right:16.6666666667%;}
+.col-sm-pull-3{right:25%;}
+.col-sm-pull-4{right:33.3333333333%;}
+.col-sm-pull-5{right:41.6666666667%;}
+.col-sm-pull-6{right:50%;}
+.col-sm-pull-7{right:58.3333333333%;}
+.col-sm-pull-8{right:66.6666666667%;}
+.col-sm-pull-9{right:75%;}
+.col-sm-pull-10{right:83.3333333333%;}
+.col-sm-pull-11{right:91.6666666667%;}
+.col-sm-pull-12{right:100%;}
+.col-sm-push-0{left:auto;}
+.col-sm-push-1{left:8.3333333333%;}
+.col-sm-push-2{left:16.6666666667%;}
+.col-sm-push-3{left:25%;}
+.col-sm-push-4{left:33.3333333333%;}
+.col-sm-push-5{left:41.6666666667%;}
+.col-sm-push-6{left:50%;}
+.col-sm-push-7{left:58.3333333333%;}
+.col-sm-push-8{left:66.6666666667%;}
+.col-sm-push-9{left:75%;}
+.col-sm-push-10{left:83.3333333333%;}
+.col-sm-push-11{left:91.6666666667%;}
+.col-sm-push-12{left:100%;}
+.col-sm-offset-0{margin-left:0;}
+.col-sm-offset-1{margin-left:8.3333333333%;}
+.col-sm-offset-2{margin-left:16.6666666667%;}
+.col-sm-offset-3{margin-left:25%;}
+.col-sm-offset-4{margin-left:33.3333333333%;}
+.col-sm-offset-5{margin-left:41.6666666667%;}
+.col-sm-offset-6{margin-left:50%;}
+.col-sm-offset-7{margin-left:58.3333333333%;}
+.col-sm-offset-8{margin-left:66.6666666667%;}
+.col-sm-offset-9{margin-left:75%;}
+.col-sm-offset-10{margin-left:83.3333333333%;}
+.col-sm-offset-11{margin-left:91.6666666667%;}
+.col-sm-offset-12{margin-left:100%;}
+.form-inline .form-group{display:inline-block;margin-bottom:0;vertical-align:middle;}
+.form-inline .form-control{display:inline-block;width:auto;vertical-align:middle;}
+.form-inline .form-control-static{display:inline-block;}
+.form-inline .input-group{display:inline-table;vertical-align:middle;}
+.form-inline .input-group .input-group-addon,.form-inline .input-group .input-group-btn,.form-inline .input-group .form-control{width:auto;}
+.form-inline .control-label{margin-bottom:0;vertical-align:middle;}
+.form-inline .radio,.form-inline .checkbox{display:inline-block;margin-top:0;margin-bottom:0;vertical-align:middle;}
+.form-inline .radio label,.form-inline .checkbox label{padding-left:0;}
+.form-inline .radio input[type="radio"],.form-inline .checkbox input[type="checkbox"]{position:relative;margin-left:0;}
+.form-inline .has-feedback .form-control-feedback{top:0;}
+.form-horizontal .control-label{text-align:right;margin-bottom:0;padding-top:7px;}
+.form-horizontal .form-group-lg .control-label{padding-top:11px;font-size:18px;}
+.form-horizontal .form-group-sm .control-label{padding-top:6px;font-size:12px;}
+.nav-justified>li,.nav-tabs.nav-justified>li{display:table-cell;width:1%;}
+.nav-justified>li>a,.nav-tabs.nav-justified>li>a{margin-bottom:0;}
+.nav-tabs-justified>li>a,.nav-tabs.nav-justified>li>a{border-bottom:1px solid #ddd;border-radius:4px 4px 0 0;}
+.nav-tabs-justified>.active>a,.nav-tabs.nav-justified>.active>a,.nav-tabs-justified>.active>a:hover,.nav-tabs.nav-justified>.active>a:hover,.nav-tabs-justified>.active>a:focus,.nav-tabs.nav-justified>.active>a:focus{border-bottom-color:#fff;}
+.modal-dialog{width:600px;margin:30px auto;}
+.modal-content{-webkit-box-shadow:0 5px 15px rgba(0,0,0,0.5);box-shadow:0 5px 15px rgba(0,0,0,0.5);}
+.modal-sm{width:300px;}
+.form-type-password-confirm .password-help{border-left:1px solid #ddd;left:50%;margin-left:15px;position:absolute;}
+.form-horizontal .form-group label{float:left;width:16.6666666667%;}
+body.navbar-is-fixed-top.navbar-administration.navbar-vertical.navbar-tray-open .navbar-fixed-top{left:24rem;}
+#webform-client-form-11751 #webform-component-partner-type-select .form-item,#webform-client-form-10835 #webform-component-partner-type-select .form-item,#webform-client-form-13615 #webform-component-partner-type-select .form-item,#webform-client-form-13617 #webform-component-partner-type-select .form-item{float:left;width:33.3333333333%;}
+.page-node-17233 .ss360-group li{float:left;width:50%;}
+.col-sm-12,.form-inline .input-group>.form-control{width:100%;}
+.top-image .views-field-field-put-title-in-top-image .field-content h1#top-image-title,.page-node-17233 h1,.page-node-17233 .ss360-content-container,.page-node-17233 .ss360-content-container p,.page-node-12878.gray-body .region-content .block-webform{float:left;width:100%;}
+}
+@media min-width992px {
+.container{width:970px;}
+.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{float:left;}
+.col-md-1{width:8.3333333333%;}
+.col-md-2{width:16.6666666667%;}
+.col-md-3{width:25%;}
+.col-md-4{width:33.3333333333%;}
+.col-md-5{width:41.6666666667%;}
+.col-md-6{width:50%;}
+.col-md-7{width:58.3333333333%;}
+.col-md-8{width:66.6666666667%;}
+.col-md-9{width:75%;}
+.col-md-10{width:83.3333333333%;}
+.col-md-11{width:91.6666666667%;}
+.col-md-12{width:100%;}
+.col-md-pull-0{right:auto;}
+.col-md-pull-1{right:8.3333333333%;}
+.col-md-pull-2{right:16.6666666667%;}
+.col-md-pull-3{right:25%;}
+.col-md-pull-4{right:33.3333333333%;}
+.col-md-pull-5{right:41.6666666667%;}
+.col-md-pull-6{right:50%;}
+.col-md-pull-7{right:58.3333333333%;}
+.col-md-pull-8{right:66.6666666667%;}
+.col-md-pull-9{right:75%;}
+.col-md-pull-10{right:83.3333333333%;}
+.col-md-pull-11{right:91.6666666667%;}
+.col-md-pull-12{right:100%;}
+.col-md-push-0{left:auto;}
+.col-md-push-2{left:16.6666666667%;}
+.col-md-push-5{left:41.6666666667%;}
+.col-md-push-6{left:50%;}
+.col-md-push-7{left:58.3333333333%;}
+.col-md-push-8{left:66.6666666667%;}
+.col-md-push-9{left:75%;}
+.col-md-push-10{left:83.3333333333%;}
+.col-md-push-11{left:91.6666666667%;}
+.col-md-push-12{left:100%;}
+.col-md-offset-0{margin-left:0;}
+.col-md-offset-1{margin-left:8.3333333333%;}
+.col-md-offset-3{margin-left:25%;}
+.col-md-offset-4{margin-left:33.3333333333%;}
+.col-md-offset-5{margin-left:41.6666666667%;}
+.col-md-offset-6{margin-left:50%;}
+.col-md-offset-7{margin-left:58.3333333333%;}
+.col-md-offset-8{margin-left:66.6666666667%;}
+.col-md-offset-9{margin-left:75%;}
+.col-md-offset-10{margin-left:83.3333333333%;}
+.col-md-offset-11{margin-left:91.6666666667%;}
+.col-md-offset-12{margin-left:100%;}
+.modal-lg{width:900px;}
+#webform-client-form-11751 #webform-component-promo,#webform-client-form-11751 #webform-component-partner-type-select,#webform-client-form-11751 #webform-component-update-partner,#webform-client-form-11751 #webform-component-distibutor-details,#webform-client-form-11751 #webform-component-partener-reseller-details,#webform-client-form-11751 #webform-component-distributor,#webform-client-form-11751 #webform-component-end-customer-details,#webform-client-form-11751 #webform-component-project-fieldset,#webform-client-form-11751 #webform-component-environment,#webform-client-form-11751 #webform-component-products,#webform-client-form-11751 #webform-component-functionality-required,#webform-client-form-11751 #webform-component-will-this-use-mela,#webform-client-form-10835 #webform-component-promo,#webform-client-form-10835 #webform-component-partner-type-select,#webform-client-form-10835 #webform-component-update-partner,#webform-client-form-10835 #webform-component-distibutor-details,#webform-client-form-10835 #webform-component-partener-reseller-details,#webform-client-form-10835 #webform-component-distributor,#webform-client-form-10835 #webform-component-end-customer-details,#webform-client-form-10835 #webform-component-project-fieldset,#webform-client-form-10835 #webform-component-environment,#webform-client-form-10835 #webform-component-products,#webform-client-form-10835 #webform-component-functionality-required,#webform-client-form-10835 #webform-component-will-this-use-mela,#webform-client-form-13615 #webform-component-promo,#webform-client-form-13615 #webform-component-partner-type-select,#webform-client-form-13615 #webform-component-update-partner,#webform-client-form-13615 #webform-component-distibutor-details,#webform-client-form-13615 #webform-component-partener-reseller-details,#webform-client-form-13615 #webform-component-distributor,#webform-client-form-13615 #webform-component-end-customer-details,#webform-client-form-13615 #webform-component-project-fieldset,#webform-client-form-13615 #webform-component-environment,#webform-client-form-13615 #webform-component-products,#webform-client-form-13615 #webform-component-functionality-required,#webform-client-form-13615 #webform-component-will-this-use-mela,#webform-client-form-13617 #webform-component-promo,#webform-client-form-13617 #webform-component-partner-type-select,#webform-client-form-13617 #webform-component-update-partner,#webform-client-form-13617 #webform-component-distibutor-details,#webform-client-form-13617 #webform-component-partener-reseller-details,#webform-client-form-13617 #webform-component-distributor,#webform-client-form-13617 #webform-component-end-customer-details,#webform-client-form-13617 #webform-component-project-fieldset,#webform-client-form-13617 #webform-component-environment,#webform-client-form-13617 #webform-component-products,#webform-client-form-13617 #webform-component-functionality-required,#webform-client-form-13617 #webform-component-will-this-use-mela{float:left;width:83.3333333333%;left:8.3333333333%;}
+.webform-progressbar-wrapper-download .webform-progressbar-outer{float:left;width:66.6666666667%;left:16.6666666667%;}
+.page-node-12878.gray-body .region-content .block-webform{float:left;width:41.6666666667%;}
+.col-md-push-1,#webform-client-form-11751 #webform-component-partner-type-select .form-item:first-child,#webform-client-form-10835 #webform-component-partner-type-select .form-item:first-child,#webform-client-form-13615 #webform-component-partner-type-select .form-item:first-child,#webform-client-form-13617 #webform-component-partner-type-select .form-item:first-child{left:8.3333333333%;}
+.col-md-push-3,#webform-client-form-11751 #webform-component-partner-type-select .form-item:last-child,#webform-client-form-10835 #webform-component-partner-type-select .form-item:last-child,#webform-client-form-13615 #webform-component-partner-type-select .form-item:last-child,#webform-client-form-13617 #webform-component-partner-type-select .form-item:last-child{left:25%;}
+.col-md-push-4,.form-type-password-confirm .password-help{left:33.3333333333%;}
+.col-md-offset-2,.page-node-12878.gray-body .region-content .block-webform:last-of-type{margin-left:16.6666666667%;}
+.top-image .views-field-field-put-title-in-top-image .field-content h1#top-image-title,#webform-client-form-11751 #webform-component-update-partner .form-group,#webform-client-form-11751 #webform-component-distibutor-details .form-group,#webform-client-form-10835 #webform-component-update-partner .form-group,#webform-client-form-10835 #webform-component-distibutor-details .form-group,#webform-client-form-13615 #webform-component-update-partner .form-group,#webform-client-form-13615 #webform-component-distibutor-details .form-group,#webform-client-form-13617 #webform-component-update-partner .form-group,#webform-client-form-13617 #webform-component-distibutor-details .form-group,#webform-client-form-11751 #webform-component-end-customer-details--state,#webform-client-form-11751 #webform-component-partener-reseller-details--reseller-partner-company-name,#webform-client-form-11751 #webform-component-partener-reseller-details--partner-email,#webform-client-form-11751 #webform-component-partener-reseller-details--partner-phone,#webform-client-form-11751 #webform-component-partener-reseller-details--partener-contact-name,#webform-client-form-11751 #webform-component-partener-reseller-details--potential-competitors,#webform-client-form-11751 #webform-component-partener-reseller-details--if-distributor-which .form-item,#webform-client-form-10835 #webform-component-end-customer-details--state,#webform-client-form-10835 #webform-component-partener-reseller-details--reseller-partner-company-name,#webform-client-form-10835 #webform-component-partener-reseller-details--partner-email,#webform-client-form-10835 #webform-component-partener-reseller-details--partner-phone,#webform-client-form-10835 #webform-component-partener-reseller-details--partener-contact-name,#webform-client-form-10835 #webform-component-partener-reseller-details--potential-competitors,#webform-client-form-10835 #webform-component-partener-reseller-details--if-distributor-which .form-item,#webform-client-form-13615 #webform-component-end-customer-details--state,#webform-client-form-13615 #webform-component-partener-reseller-details--reseller-partner-company-name,#webform-client-form-13615 #webform-component-partener-reseller-details--partner-email,#webform-client-form-13615 #webform-component-partener-reseller-details--partner-phone,#webform-client-form-13615 #webform-component-partener-reseller-details--partener-contact-name,#webform-client-form-13615 #webform-component-partener-reseller-details--potential-competitors,#webform-client-form-13615 #webform-component-partener-reseller-details--if-distributor-which .form-item,#webform-client-form-13617 #webform-component-end-customer-details--state,#webform-client-form-13617 #webform-component-partener-reseller-details--reseller-partner-company-name,#webform-client-form-13617 #webform-component-partener-reseller-details--partner-email,#webform-client-form-13617 #webform-component-partener-reseller-details--partner-phone,#webform-client-form-13617 #webform-component-partener-reseller-details--partener-contact-name,#webform-client-form-13617 #webform-component-partener-reseller-details--potential-competitors,#webform-client-form-13617 #webform-component-partener-reseller-details--if-distributor-which .form-item,#webform-client-form-11751 #webform-component-distributor .form-group,#webform-client-form-10835 #webform-component-distributor .form-group,#webform-client-form-13615 #webform-component-distributor .form-group,#webform-client-form-13617 #webform-component-distributor .form-group,#webform-client-form-11751 #webform-component-end-customer-details--company,#webform-client-form-11751 #webform-component-end-customer-details--name,#webform-client-form-11751 #webform-component-end-customer-details--email,#webform-client-form-11751 #webform-component-end-customer-details--phone,#webform-client-form-11751 #webform-component-end-customer-details--expected-closing-date,#webform-client-form-11751 #webform-component-end-customer-details--country,#webform-client-form-10835 #webform-component-end-customer-details--company,#webform-client-form-10835 #webform-component-end-customer-details--name,#webform-client-form-10835 #webform-component-end-customer-details--email,#webform-client-form-10835 #webform-component-end-customer-details--phone,#webform-client-form-10835 #webform-component-end-customer-details--expected-closing-date,#webform-client-form-10835 #webform-component-end-customer-details--country,#webform-client-form-13615 #webform-component-end-customer-details--company,#webform-client-form-13615 #webform-component-end-customer-details--name,#webform-client-form-13615 #webform-component-end-customer-details--email,#webform-client-form-13615 #webform-component-end-customer-details--phone,#webform-client-form-13615 #webform-component-end-customer-details--expected-closing-date,#webform-client-form-13615 #webform-component-end-customer-details--country,#webform-client-form-13617 #webform-component-end-customer-details--company,#webform-client-form-13617 #webform-component-end-customer-details--name,#webform-client-form-13617 #webform-component-end-customer-details--email,#webform-client-form-13617 #webform-component-end-customer-details--phone,#webform-client-form-13617 #webform-component-end-customer-details--expected-closing-date,#webform-client-form-13617 #webform-component-end-customer-details--country,#webform-client-form-11751 #webform-component-environment--environment-col-6,#webform-client-form-11751 #webform-component-environment--environment-col-6-2,#webform-client-form-10835 #webform-component-environment--environment-col-6,#webform-client-form-10835 #webform-component-environment--environment-col-6-2,#webform-client-form-13615 #webform-component-environment--environment-col-6,#webform-client-form-13615 #webform-component-environment--environment-col-6-2,#webform-client-form-13617 #webform-component-environment--environment-col-6,#webform-client-form-13617 #webform-component-environment--environment-col-6-2,#webform-client-form-11751 #webform-component-products--product-interest,#webform-client-form-10835 #webform-component-products--product-interest,#webform-client-form-13615 #webform-component-products--product-interest,#webform-client-form-13617 #webform-component-products--product-interest,#webform-client-form-11751 #webform-component-products--callout,#webform-client-form-10835 #webform-component-products--callout,#webform-client-form-13615 #webform-component-products--callout,#webform-client-form-13617 #webform-component-products--callout,.page-node-17231 .ss360-group li{float:left;width:50%;}
+.node-type-case #block-menu-menu-more-resources,.node-type-case #block-menu-menu-media,.node-type-case #block-menu-menu-community,.page-load-balancing-webinars-and-videos #block-menu-menu-more-resources,.page-load-balancing-webinars-and-videos #block-menu-menu-media,.page-load-balancing-webinars-and-videos #block-menu-menu-community,.page-load-balancing-webinars-slideshows #block-menu-menu-more-resources,.page-load-balancing-webinars-slideshows #block-menu-menu-media,.page-load-balancing-webinars-slideshows #block-menu-menu-community,#webform-client-form-11751 #webform-component-partner-type-select .form-item,#webform-client-form-10835 #webform-component-partner-type-select .form-item,#webform-client-form-13615 #webform-component-partner-type-select .form-item,#webform-client-form-13617 #webform-component-partner-type-select .form-item,.page-node-17233 .ss360-group li{float:left;width:33.3333333333%;}
+#webform-client-form-11751 #webform-component-products--callout--schedule-callback--schedule-a-callback,#webform-client-form-10835 #webform-component-products--callout--schedule-callback--schedule-a-callback,#webform-client-form-13615 #webform-component-products--callout--schedule-callback--schedule-a-callback,#webform-client-form-13617 #webform-component-products--callout--schedule-callback--schedule-a-callback,#webform-client-form-11751 #webform-component-product-interest--callout--schedule-a-callback,#webform-client-form-10835 #webform-component-product-interest--callout--schedule-a-callback,#webform-client-form-13615 #webform-component-product-interest--callout--schedule-a-callback,#webform-client-form-13617 #webform-component-product-interest--callout--schedule-a-callback{float:left;width:75%;}
+#webform-client-form-11751 #webform-component-products--callout--schedule-callback--select-a-time,#webform-client-form-10835 #webform-component-products--callout--schedule-callback--select-a-time,#webform-client-form-13615 #webform-component-products--callout--schedule-callback--select-a-time,#webform-client-form-13617 #webform-component-products--callout--schedule-callback--select-a-time,#webform-client-form-11751 #webform-component-products--callout--schedule-callback--callback-selection,#webform-client-form-10835 #webform-component-products--callout--schedule-callback--callback-selection,#webform-client-form-13615 #webform-component-products--callout--schedule-callback--callback-selection,#webform-client-form-13617 #webform-component-products--callout--schedule-callback--callback-selection,#webform-client-form-11751 #webform-component-products--callout--schedule-callback--select-a-date,#webform-client-form-10835 #webform-component-products--callout--schedule-callback--select-a-date,#webform-client-form-13615 #webform-component-products--callout--schedule-callback--select-a-date,#webform-client-form-13617 #webform-component-products--callout--schedule-callback--select-a-date,.page-node-11751 .progressbar-wrapper .webform-progressbar-outer,.page-node-10835 .progressbar-wrapper .webform-progressbar-outer,.page-node-13615 .progressbar-wrapper .webform-progressbar-outer,.page-node-13617 .progressbar-wrapper .webform-progressbar-outer,.page-node-17233 h1,.page-node-17233 .ss360-content-container,.page-node-17233 .ss360-content-container p{float:left;width:100%;}
+}
+@media min-width1200px {
+.container{width:1170px;}
+.col-lg-1{width:8.3333333333%;}
+.col-lg-2{width:16.6666666667%;}
+.col-lg-3{width:25%;}
+.col-lg-4{width:33.3333333333%;}
+.col-lg-5{width:41.6666666667%;}
+.col-lg-6{width:50%;}
+.col-lg-7{width:58.3333333333%;}
+.col-lg-8{width:66.6666666667%;}
+.col-lg-9{width:75%;}
+.col-lg-10{width:83.3333333333%;}
+.col-lg-11{width:91.6666666667%;}
+.col-lg-12{width:100%;}
+.col-lg-pull-0{right:auto;}
+.col-lg-pull-1{right:8.3333333333%;}
+.col-lg-pull-2{right:16.6666666667%;}
+.col-lg-pull-3{right:25%;}
+.col-lg-pull-4{right:33.3333333333%;}
+.col-lg-pull-5{right:41.6666666667%;}
+.col-lg-pull-6{right:50%;}
+.col-lg-pull-7{right:58.3333333333%;}
+.col-lg-pull-8{right:66.6666666667%;}
+.col-lg-pull-9{right:75%;}
+.col-lg-pull-10{right:83.3333333333%;}
+.col-lg-pull-11{right:91.6666666667%;}
+.col-lg-pull-12{right:100%;}
+.col-lg-push-0{left:auto;}
+.col-lg-push-1{left:8.3333333333%;}
+.col-lg-push-2{left:16.6666666667%;}
+.col-lg-push-3{left:25%;}
+.col-lg-push-4{left:33.3333333333%;}
+.col-lg-push-5{left:41.6666666667%;}
+.col-lg-push-6{left:50%;}
+.col-lg-push-7{left:58.3333333333%;}
+.col-lg-push-8{left:66.6666666667%;}
+.col-lg-push-9{left:75%;}
+.col-lg-push-10{left:83.3333333333%;}
+.col-lg-push-11{left:91.6666666667%;}
+.col-lg-push-12{left:100%;}
+.col-lg-offset-0{margin-left:0;}
+.col-lg-offset-1{margin-left:8.3333333333%;}
+.col-lg-offset-2{margin-left:16.6666666667%;}
+.col-lg-offset-3{margin-left:25%;}
+.col-lg-offset-4{margin-left:33.3333333333%;}
+.col-lg-offset-5{margin-left:41.6666666667%;}
+.col-lg-offset-6{margin-left:50%;}
+.col-lg-offset-7{margin-left:58.3333333333%;}
+.col-lg-offset-8{margin-left:66.6666666667%;}
+.col-lg-offset-9{margin-left:75%;}
+.col-lg-offset-10{margin-left:83.3333333333%;}
+.col-lg-offset-11{margin-left:91.6666666667%;}
+.col-lg-offset-12{margin-left:100%;}
+.navbar-right .dropdown-menu{right:0;left:auto;}
+.navbar-right .dropdown-menu-left{left:0;right:auto;}
+.navbar{border-radius:4px;}
+.navbar-collapse{width:auto;border-top:0;box-shadow:none;}
+.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important;}
+.navbar-collapse.in{overflow-y:visible;}
+.navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{padding-left:0;padding-right:0;}
+.container>.navbar-header,.container>.navbar-collapse,.container-fluid>.navbar-header,.container-fluid>.navbar-collapse{margin-right:0;margin-left:0;}
+.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand{margin-left:-15px;}
+table.visible-lg{display:table!important;}
+tr.visible-lg{display:table-row!important;}
+th.visible-lg,td.visible-lg{display:table-cell!important;}
+.visible-lg-inline{display:inline!important;}
+.visible-lg-inline-block{display:inline-block!important;}
+.hidden-lg{display:none!important;}
+.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.navbar-header{float:left;}
+.navbar-static-top,.navbar-fixed-top,.navbar-fixed-bottom{border-radius:0;}
+.visible-lg,.visible-lg-block{display:block!important;}
+}
+@media screen and max-width767px {
+.table-responsive{width:100%;margin-bottom:15px;overflow-y:hidden;-ms-overflow-style:0;border:1px solid #ddd;}
+.table-responsive>.table{margin-bottom:0;}
+.table-responsive>.table>thead>tr>th,.table-responsive>.table>thead>tr>td,.table-responsive>.table>tbody>tr>th,.table-responsive>.table>tbody>tr>td,.table-responsive>.table>tfoot>tr>th,.table-responsive>.table>tfoot>tr>td{white-space:nowrap;}
+.table-responsive>.table-bordered{border:0;}
+.table-responsive>.table-bordered>thead>tr>th:first-child,.table-responsive>.table-bordered>thead>tr>td:first-child,.table-responsive>.table-bordered>tbody>tr>th:first-child,.table-responsive>.table-bordered>tbody>tr>td:first-child,.table-responsive>.table-bordered>tfoot>tr>th:first-child,.table-responsive>.table-bordered>tfoot>tr>td:first-child{border-left:0;}
+.table-responsive>.table-bordered>thead>tr>th:last-child,.table-responsive>.table-bordered>thead>tr>td:last-child,.table-responsive>.table-bordered>tbody>tr>th:last-child,.table-responsive>.table-bordered>tbody>tr>td:last-child,.table-responsive>.table-bordered>tfoot>tr>th:last-child,.table-responsive>.table-bordered>tfoot>tr>td:last-child{border-right:0;}
+.table-responsive>.table-bordered>tbody>tr:last-child>th,.table-responsive>.table-bordered>tbody>tr:last-child>td,.table-responsive>.table-bordered>tfoot>tr:last-child>th,.table-responsive>.table-bordered>tfoot>tr:last-child>td{border-bottom:0;}
+}
+@media screen and -webkit-min-device-pixel-ratio0 {
+input[type="date"].form-control,input[type="time"].form-control,input[type="datetime-local"].form-control,input[type="month"].form-control{line-height:34px;}
+input[type="date"].input-sm,.input-group-sm>input[type="date"].form-control,.input-group-sm>input[type="date"].input-group-addon,.input-group-sm>.input-group-btn>input[type="date"].btn,.input-group-sm input[type="date"],input[type="time"].input-sm,.input-group-sm>input[type="time"].form-control,.input-group-sm>input[type="time"].input-group-addon,.input-group-sm>.input-group-btn>input[type="time"].btn,.input-group-sm input[type="time"],input[type="datetime-local"].input-sm,.input-group-sm>input[type="datetime-local"].form-control,.input-group-sm>input[type="datetime-local"].input-group-addon,.input-group-sm>.input-group-btn>input[type="datetime-local"].btn,.input-group-sm input[type="datetime-local"],input[type="month"].input-sm,.input-group-sm>input[type="month"].form-control,.input-group-sm>input[type="month"].input-group-addon,.input-group-sm>.input-group-btn>input[type="month"].btn,.input-group-sm input[type="month"]{line-height:30px;}
+input[type="date"].input-lg,.input-group-lg>input[type="date"].form-control,.input-group-lg>input[type="date"].input-group-addon,.input-group-lg>.input-group-btn>input[type="date"].btn,.input-group-lg input[type="date"],input[type="time"].input-lg,.input-group-lg>input[type="time"].form-control,.input-group-lg>input[type="time"].input-group-addon,.input-group-lg>.input-group-btn>input[type="time"].btn,.input-group-lg input[type="time"],input[type="datetime-local"].input-lg,.input-group-lg>input[type="datetime-local"].form-control,.input-group-lg>input[type="datetime-local"].input-group-addon,.input-group-lg>.input-group-btn>input[type="datetime-local"].btn,.input-group-lg input[type="datetime-local"],input[type="month"].input-lg,.input-group-lg>input[type="month"].form-control,.input-group-lg>input[type="month"].input-group-addon,.input-group-lg>.input-group-btn>input[type="month"].btn,.input-group-lg input[type="month"]{line-height:46px;}
+}
+@media max-device-width480px and orientationlandscape {
+.navbar-fixed-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{max-height:200px;}
+}
+@media all and transform-3d,-webkit-transform-3d {
+.carousel-inner>.item{-webkit-transition:0 .6s ease-in-out;-moz-transition:0 .6s ease-in-out;-o-transition:0 .6s ease-in-out;transition:transform .6s ease-in-out;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:1000px;-moz-perspective:1000px;perspective:1000px;}
+.carousel-inner>.item.next,.carousel-inner>.item.active.right{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0);left:0;}
+.carousel-inner>.item.prev,.carousel-inner>.item.active.left{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);left:0;}
+.carousel-inner>.item.next.left,.carousel-inner>.item.prev.right,.carousel-inner>.item.active{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);left:0;}
+}
+@media screen and min-width768px {
+.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-prev,.carousel-control .icon-next{width:30px;height:30px;margin-top:-10px;font-size:30px;}
+.carousel-control .glyphicon-chevron-left,.carousel-control .icon-prev{margin-left:-10px;}
+.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next{margin-right:-10px;}
+.carousel-caption{left:20%;right:20%;padding-bottom:30px;}
+.carousel-indicators{bottom:20px;}
+.navbar.container{max-width:720px;}
+.top-image .views-field-field-put-title-in-top-image .field-content h1#top-image-title{font-size:3em;}
+.top-image:not(.has-subtext) .views-field-field-put-title-in-top-image .field-content h1#top-image-title{margin-top:20px;}
+#quote-carousel{margin-bottom:0;padding:0 40px 30px;}
+.tab-matrix .container #perpetual .legend{text-align:right;}
+.tab-matrix .container #perpetual .legend .circleholder{display:inline-block;text-align:inherit;margin:0;}
+#webform-client-form-11751 #webform-component-partner-type-select #edit-submitted-partner-type-select,#webform-client-form-10835 #webform-component-partner-type-select #edit-submitted-partner-type-select,#webform-client-form-13615 #webform-component-partner-type-select #edit-submitted-partner-type-select,#webform-client-form-13617 #webform-component-partner-type-select #edit-submitted-partner-type-select{margin-top:0;}
+#webform-client-form-11751 #webform-component-partner-type-select .form-item,#webform-client-form-10835 #webform-component-partner-type-select .form-item,#webform-client-form-13615 #webform-component-partner-type-select .form-item,#webform-client-form-13617 #webform-component-partner-type-select .form-item{margin-bottom:0;}
+#webform-client-form-11751 #webform-component-end-customer-details--expected-closing-date .webform-container-inline.webform-datepicker .form-item,#webform-client-form-10835 #webform-component-end-customer-details--expected-closing-date .webform-container-inline.webform-datepicker .form-item,#webform-client-form-13615 #webform-component-end-customer-details--expected-closing-date .webform-container-inline.webform-datepicker .form-item,#webform-client-form-13617 #webform-component-end-customer-details--expected-closing-date .webform-container-inline.webform-datepicker .form-item{display:inline-block!important;}
+#webform-client-form-11751 #webform-component-partener-reseller-details--partner-confirm--is-this-you{border-left:4px solid #66cceb;border-top:none;padding-left:3em;}
+#webform-client-form-11751 form.webform-client-form fieldset.panel-default .panel-body{margin:1em 6em;}
+#webform-client-form-11751 .panel-body.fieldset-wrapper{padding:0;}
+.homepage-callout.bluetowhite .row .whitetxt{max-height:none;}
+.vlm-promo.nav-tabs li a .promotion{display:inline-block;position:absolute;right:0;top:18px;transform:rotate(40deg);font-size:.5em;background-color:#fff;color:#292E49;z-index:1;letter-spacing:.13px;font-weight:700;padding:2px 0;}
+.vlm-promo.nav-tabs li a .promotion:before{content:"";width:160px;height:100%;background-color:#fff;position:absolute;top:0;right:-50px;z-index:-1;}
+#block-block-259 .background4000 .holder h2 .row3{font-size:.95em;}
+#block-block-259 .background4000 .holder h2{text-align:left;}
+#block-block-259 .background4000 .holder:after{content:"";position:absolute;width:300px;height:100%;top:0;left:0;background-color:rgba(0,0,0,0.7);clip-path:polygon(00,85%0,100%100%,0%100%);}
+#block-block-259 .background4000{background-image:url(https://d3av4ai3v402jn.cloudfront.net/files/assets/web/images/lm4000promo.jpg);background-position:top;background-repeat:no-repeat;}
+.page-node-12761 #block-block-264 .background5600 .holder #circlepromo:after{content:url("https://d3av4ai3v402jn.cloudfront.net/files/assets/web/images/product-solutions/stacked5600.png");position:absolute;left:58%;top:-25%;transform:scale(0.9);}
+ul.secondary,.filter-help{float:right;}
+body:not(.partner-portal) .top-ctas ul,body:not(.partner-portal) .region-top .block-menu ul,body.partner-portal .top-ctas ul,body.partner-portal .region-top .block-menu ul,.top-image .views-field-field-put-title-in-top-image .field-content,.top-image .views-field-field-top-image-sub-text{max-width:992px;}
+body:not(.partner-portal) .top-ctas ul li,body:not(.partner-portal) .region-top .block-menu ul li,body:not(.partner-portal) .top-ctas ul li:nth-child(1):nth-last-child(2):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(2):nth-last-child(1):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(1):nth-last-child(2):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(2):nth-last-child(1):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(1):nth-last-child(4):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(2):nth-last-child(3):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(3):nth-last-child(2):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(4):nth-last-child(1):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(1):nth-last-child(4):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(2):nth-last-child(3):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(3):nth-last-child(2):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(4):nth-last-child(1):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(1):nth-last-child(6):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(2):nth-last-child(5):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(3):nth-last-child(4):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(4):nth-last-child(3):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(5):nth-last-child(2):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(6):nth-last-child(1):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(1):nth-last-child(6):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(2):nth-last-child(5):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(3):nth-last-child(4):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(4):nth-last-child(3):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(5):nth-last-child(2):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(6):nth-last-child(1):last-child{width:49.7%;}
+body:not(.partner-portal) .top-ctas ul li:nth-child(1):nth-last-child(1):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(1):nth-last-child(1):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(1):nth-last-child(3):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(2):nth-last-child(2):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(3):nth-last-child(1):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(1):nth-last-child(3):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(2):nth-last-child(2):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(3):nth-last-child(1):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(1):nth-last-child(5):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(2):nth-last-child(4):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(3):nth-last-child(3):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(4):nth-last-child(2):last-child,body:not(.partner-portal) .top-ctas ul li:nth-child(5):nth-last-child(1):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(1):nth-last-child(5):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(2):nth-last-child(4):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(3):nth-last-child(3):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(4):nth-last-child(2):last-child,body:not(.partner-portal) .region-top .block-menu ul li:nth-child(5):nth-last-child(1):last-child{width:100%;}
+.tab-matrix .container .hold .tabbed-top-contain .sticky-hold .table,.tab-matrix .container .hold .tabbed-bottom-contain .table{table-layout:inherit!important;}
+.page-node-12761 #block-block-264 .background5600 .holder #circlepromo,.page-node-12762 #block-block-265 .background5000 .holder #circlepromo,.page-node-12970 #block-block-273 .background200 .holder #circlepromo{left:25%;}
+}
+@media max-width767px {
+table.visible-xs{display:table!important;}
+tr.visible-xs{display:table-row!important;}
+th.visible-xs,td.visible-xs{display:table-cell!important;}
+.visible-xs-inline{display:inline!important;}
+.visible-xs-inline-block{display:inline-block!important;}
+.hidden-xs{display:none!important;}
+.visible-xs,.visible-xs-block{display:block!important;}
+}
+@media min-width768px and max-width991px {
+table.visible-sm{display:table!important;}
+tr.visible-sm{display:table-row!important;}
+th.visible-sm,td.visible-sm{display:table-cell!important;}
+.visible-sm-inline{display:inline!important;}
+.visible-sm-inline-block{display:inline-block!important;}
+.hidden-sm{display:none!important;}
+.visible-sm,.visible-sm-block{display:block!important;}
+}
+@media min-width992px and max-width1199px {
+table.visible-md{display:table!important;}
+tr.visible-md{display:table-row!important;}
+th.visible-md,td.visible-md{display:table-cell!important;}
+.visible-md-inline{display:inline!important;}
+.visible-md-inline-block{display:inline-block!important;}
+.hidden-md{display:none!important;}
+.visible-md,.visible-md-block{display:block!important;}
+}
+@media print {
+table.visible-print{display:table!important;}
+tr.visible-print{display:table-row!important;}
+th.visible-print,td.visible-print{display:table-cell!important;}
+.visible-print-inline{display:inline!important;}
+.visible-print-inline-block{display:inline-block!important;}
+.hidden-print{display:none!important;}
+.visible-print,.visible-print-block{display:block!important;}
+}
+	
+</style>
 There are lots of powerful things you can do with the Markdown editor. If you've gotten pretty comfortable with writing in Markdown, then you may enjoy some more advanced tips about the types of things you can do with Markdown!
 
 As with the last post about the editor, you'll want to be actually editing this post as you read it so that you can see all the Markdown code we're using.
