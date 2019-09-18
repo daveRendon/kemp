@@ -31,7 +31,7 @@ There are two types of code elements which can be inserted in Markdown, the firs
 
 #### HTML
 
-
+<p>
 <table class="table-narrow">
 	<thead>
 		<tr>
@@ -230,7 +230,7 @@ There are two types of code elements which can be inserted in Markdown, the firs
 		</tr>
 	</tbody>
 </table>
-
+</p>
 
 #### CSS
 
