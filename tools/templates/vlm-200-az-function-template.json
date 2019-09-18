@@ -1,0 +1,87 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachines_LoadMaster_name": {
+            "defaultValue": "LoadMaster",
+            "type": "String"
+        },
+        "availabilitySets_LOADMASTER_AZFUNCTION_AVSET_externalid": {
+            "defaultValue": "/subscriptions/d988cbee-043f-4c46-9a59-dedb2119e48c/resourceGroups/kemp-az-function/providers/Microsoft.Compute/availabilitySets/LOADMASTER-AZFUNCTION-AVSET",
+            "type": "String"
+        },
+        "disks_LoadMaster_OsDisk_1_030244eab18a4307a089f241e54dd30b_externalid": {
+            "defaultValue": "/subscriptions/d988cbee-043f-4c46-9a59-dedb2119e48c/resourceGroups/kemp-az-function/providers/Microsoft.Compute/disks/LoadMaster_OsDisk_1_030244eab18a4307a089f241e54dd30b",
+            "type": "String"
+        },
+        "networkInterfaces_loadmaster672_externalid": {
+            "defaultValue": "/subscriptions/d988cbee-043f-4c46-9a59-dedb2119e48c/resourceGroups/kemp-az-function/providers/Microsoft.Network/networkInterfaces/loadmaster672",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2019-03-01",
+            "name": "[parameters('virtualMachines_LoadMaster_name')]",
+            "location": "centralus",
+            "plan": {
+                "name": "vlm-200-hrl-v3",
+                "product": "vlm-azure",
+                "publisher": "kemptech"
+            },
+            "properties": {
+                "availabilitySet": {
+                    "id": "[parameters('availabilitySets_LOADMASTER_AZFUNCTION_AVSET_externalid')]"
+                },
+                "hardwareProfile": {
+                    "vmSize": "Standard_A1"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "kemptech",
+                        "offer": "vlm-azure",
+                        "sku": "vlm-200-hrl-v3",
+                        "version": "7.2.47017591"
+                    },
+                    "osDisk": {
+                        "osType": "Linux",
+                        "name": "[concat(parameters('virtualMachines_LoadMaster_name'), '_OsDisk_1_030244eab18a4307a089f241e54dd30b')]",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "managedDisk": {
+                            "storageAccountType": "StandardSSD_LRS",
+                            "id": "[parameters('disks_LoadMaster_OsDisk_1_030244eab18a4307a089f241e54dd30b_externalid')]"
+                        },
+                        "diskSizeGB": 16
+                    },
+                    "dataDisks": []
+                },
+                "osProfile": {
+                    "computerName": "[parameters('virtualMachines_LoadMaster_name')]",
+                    "adminUsername": "bal",
+                    "linuxConfiguration": {
+                        "disablePasswordAuthentication": false,
+                        "provisionVMAgent": true
+                    },
+                    "secrets": [],
+                    "allowExtensionOperations": true
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[parameters('networkInterfaces_loadmaster672_externalid')]"
+                        }
+                    ]
+                },
+                "diagnosticsProfile": {
+                    "bootDiagnostics": {
+                        "enabled": true,
+                        "storageUri": "https://kempazfunctiondiag.blob.core.windows.net/"
+                    }
+                }
+            }
+        }
+    ]
+}
