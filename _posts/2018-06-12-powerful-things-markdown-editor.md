@@ -32,11 +32,204 @@ There are two types of code elements which can be inserted in Markdown, the firs
 #### HTML
 
 ```html
-<li class="ml-1 mr-1">
-    <a target="_blank" href="#">
-    <i class="fab fa-twitter"></i>
-    </a>
-</li>
+<table class="table-narrow">
+	<thead>
+		<tr>
+			<th>Features</th>
+			<th>Azure Load Balancer</th>
+			<th>Azure Application Gateway</th>
+			<th>LoadMaster for Azure</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Basic and Standard Tier VM support</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Network Level L4 load balancing</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Multiple application access with single IP</td>
+			<td>Limited</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Pre-configured application templates</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Web User Interface for ease of management</td>
+			<td>Limited</td>
+			<td>Limited</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>High Availability &amp; Clustering</td>
+			<td>Limited</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Web Application Firewall</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td>Limited</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Hybrid Traffic Distribution</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Scheduling methods</td>
+			<td>Round Robin Only</td>
+			<td>Round Robin</td>
+			<td>Multiple</td>
+		</tr>
+		<tr>
+			<td>Server Persistance</td>
+			<td>IP Address</td>
+			<td>IP Address Cookies</td>
+			<td>Multiple</td>
+		</tr>
+		<tr>
+			<td>SSL Termination/Offload</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Content Caching/Compression</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Least Connection Scheduling</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Server Name Indicator (SNI)</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>VM Availability Awareness</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Two Factor Authentication</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Health Check Aggregation</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Single Sign On</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>SmartCard(CAC) / X.509 Certificate Authentication</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>LDAP Authentication</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Radius Authentication</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Kerberos Constrained Delegation</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>AD group based traffic steering</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Header content switching</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td>Limited</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Header manipulation</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Content Rewriting</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Adaptive scheduling</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>OCSP Certificate Validation</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>SAML Authentication</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>HTTP/2 Support</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+		<tr>
+			<td>Reverse Proxy</td>
+			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
+		</tr>
+	</tbody>
+</table>
 ```
 
 #### CSS
