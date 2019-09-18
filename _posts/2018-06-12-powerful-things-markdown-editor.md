@@ -872,9 +872,11 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>Network Level L4 load balancing</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
@@ -884,10 +886,12 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td>Limited</td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>Pre-configured application templates</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
@@ -896,10 +900,12 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td>Limited</td>
 			<td>Limited</td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>High Availability &amp; Clustering</td>
 			<td>Limited</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
@@ -908,10 +914,12 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td>Limited</td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>Hybrid Traffic Distribution</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
@@ -919,17 +927,20 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td>Scheduling methods</td>
 			<td>Round Robin Only</td>
 			<td>Round Robin</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td>Multiple</td>
 		</tr>
 		<tr>
 			<td>Server Persistance</td>
 			<td>IP Address</td>
 			<td>IP Address Cookies</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td>Multiple</td>
 		</tr>
 		<tr>
 			<td>SSL Termination/Offload</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
@@ -938,16 +949,19 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>Least Connection Scheduling</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>Server Name Indicator (SNI)</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
@@ -956,11 +970,13 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>Two Factor Authentication</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
@@ -968,9 +984,11 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>Single Sign On</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
@@ -980,11 +998,13 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>LDAP Authentication</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
@@ -992,11 +1012,13 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>Kerberos Constrained Delegation</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
@@ -1004,11 +1026,13 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>Header content switching</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td>Limited</td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
@@ -1016,11 +1040,13 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>Content Rewriting</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
@@ -1028,11 +1054,13 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>OCSP Certificate Validation</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
@@ -1040,16 +1068,19 @@ There are two types of code elements which can be inserted in Markdown, the firs
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>HTTP/2 Support</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
 		<tr>
 			<td>Reverse Proxy</td>
 			<td><i class="ka table-cross">&zwnj;</i></td>
+			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 			<td><i class="ka table-check">&zwnj;</i></td>
 		</tr>
