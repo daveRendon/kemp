@@ -1,8 +1,6 @@
-# KEMP Useful tools 
+# Sizing tools 
 
 Here´s a list of tools available you might want to take a look when sizing/implementing Loadmaster: 
-
-[KEMP Virtual Loadmaster Download ](https://kemptechnologies.com/vlm-download/) 
 
 [Microsoft Exchange 2010 Sizing Tool](https://kemptechnologies.com/load-balancer-sizing-exchange-2010/)
 
