@@ -1,5 +1,5 @@
 [![Build Status](https://dev.azure.com/wikiazure/kemp%20toolkit/_apis/build/status/kemp%20toolkit?branchName=master)](https://dev.azure.com/wikiazure/kemp%20toolkit/_build/latest?definitionId=23&branchName=master)
-# Kemp personal toolkit
+# Kemp toolkit
 
 ## QuickStart Guide for POCs
 
@@ -11,10 +11,10 @@ The following information is relevant to get started with contributing to this r
 + [**Useful Tools**](/1-CONTRIBUTION-GUIDE/useful-tools.md#useful-tools). Useful resources and tools.
 
 
-| Specifications  | VLM-200 | VLM-2000 |VLM-5000 |VLM-10G |
+| Specifications  | VLM-200 | VLM-3000 |VLM-5000 |VLM-10G |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Balancer Throughput License †  | Up to 200 Mbps  |Up to 2 Gbps |Up to 5 Gbps  |Up to 10 Gbps  |
-| SSL TPS License †  | Up to 200  |Up to 1,000  |Up to 10,000  |Up to 12,000  |
+| Balancer Throughput License †  | Up to 200 Mbps  |Up to 3 Gbps |Up to 5 Gbps  |Up to 10 Gbps  |
+| SSL TPS License †  | Up to 200  |Up to 4,000  |Up to 10,000  |Up to 12,000  |
 | Layer 4 concurrent connections ‡  | 3,000,000  |3,000,000  |3,000,000  |3,000,000  |
 | Max Servers Supported / Virtual Clusters  | 1000/256  |1000/1000 |1000/1000  |1000/1000  |
 | LoadMaster Clustering  | YES  |YES  |YES  |YES  |
