@@ -11,13 +11,13 @@ The following information is relevant to get started with contributing to this r
 + [**Useful Tools**](/1-CONTRIBUTION-GUIDE/useful-tools.md#useful-tools). Useful resources and tools.
 
 
-| Specifications  | VLM-200 | VLM-3000 |VLM-5000 |VLM-10G |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Balancer Throughput License †  | Up to 200 Mbps  |Up to 3 Gbps |Up to 5 Gbps  |Up to 10 Gbps  |
-| SSL TPS License †  | Up to 200  |Up to 4,000  |Up to 10,000  |Up to 12,000  |
-| Layer 4 concurrent connections ‡  | 3,000,000  |3,000,000  |3,000,000  |3,000,000  |
-| Max Servers Supported / Virtual Clusters  | 1000/256  |1000/1000 |1000/1000  |1000/1000  |
-| LoadMaster Clustering  | YES  |YES  |YES  |YES  |
+| Specifications  | VLM-200 | VLM-500 | VLM-3000 |VLM-5000 |VLM-10G |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Balancer Throughput License †  | Up to 200 Mbps  |Up to 500 Mbps |Up to 3 Gbps |Up to 5 Gbps  |Up to 10 Gbps  |
+| SSL TPS License †  | Up to 200  | Up to 500  | Up to 4,000  |Up to 10,000  |Up to 12,000  |
+| Layer 4 concurrent connections ‡  | 3,000,000  |3,000,000  |3,000,000  |3,000,000  | 3,000,000  |
+| Max Servers Supported / Virtual Clusters  | 1000/256  |1000/1000 |1000/1000 |1000/1000  |1000/1000  |
+| LoadMaster Clustering  | YES  |YES |YES |YES  |YES  |
 
 ## Scope of POC
 
