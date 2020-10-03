@@ -1,0 +1,6 @@
+//CEF Logs with all of the possible fields on display
+CommonSecurityLog
+| where DeviceVendor == "Kemp"
+| extend Event = split(split(AdditionalExtensions, ";")[1], "=")[1]
+| summarize Count = count() by tostring(Event)
+| render piechart
