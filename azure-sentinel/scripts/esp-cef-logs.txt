@@ -1,0 +1,22 @@
+//This script parses out all the fields for the ESP CEF logs and presents them to the user.
+CommonSecurityLog
+| where DeviceVendor == "Kemp"
+| extend ExtFields = split(AdditionalExtensions, ';')
+| extend VSInfo = split(ExtFields[0], "=")[1]
+| extend VSIP = split(VSInfo, ":")[0]
+| extend VSPort = split(VSInfo, ":")[1]
+| extend Event = split(ExtFields[1], "=")[1]
+| extend SourceIP = case( DeviceEventClassID !in (6, 14, 15), split(ExtFields[2], "=")[1], DeviceEventClassID == 6, split(ExtFields[3], "=")[1], SourceIP)
+| extend SourcePort = iff ( DeviceEventClassID in (1, 2, 3, 4, 5, 11, 12, 13, 16, 17), split(ExtFields[3], "=")[1], "")
+| extend DestinationIP = iff ( DeviceEventClassID in (4, 5), split(ExtFields[4], "=")[1], "")
+| extend DestinationPort = iff ( DeviceEventClassID in (4, 5), split(ExtFields[5], "=")[1], "")
+| extend AwaitingRemoteAddress = iff ( DeviceEventClassID == 3, split(ExtFields[4], "=")[1], "")
+| extend RequestMethod = iff( DeviceEventClassID in (11, 12), split(ExtFields[4], "=")[1], "")
+| extend RequestURL = iff( DeviceEventClassID in (11, 12), split(ExtFields[5], "=")[1], "")
+| extend user_ext = split(ExtFields[6], "=")
+| extend User = case( DeviceEventClassID == 6, split(ExtFields[2], "=")[1], DeviceEventClassID in (7, 8, 9, 10), split(ExtFields[3], "=")[1], DeviceEventClassID in (11, 12), iff( user_ext[0] == "user", user_ext[1], ""), "")
+| extend user_agent_ext = split(ExtFields[7], "=")
+| extend UserAgent = iff( DeviceEventClassID in (11, 12), case ( user_ext[0] == "useragent", user_ext[1], user_agent_ext[0] == "useragent", user_agent_ext[1], ""), "")
+| extend Resource = case( DeviceEventClassID == 15, split(ExtFields[2], "=") [1], DeviceEventClassID in (16, 17), split(ExtFields[4], "=")[1], "")
+| extend DTCode = iff ( DeviceEventClassID == 13, split(ExtFields[4], "=")[1], "")
+| project format_datetime(TimeGenerated, "yyyy-MM-dd HH:mm:ss"), DeviceVendor, DeviceProduct, DeviceEventClassID, LogSeverity, Message, Event, VSIP, VSPort, SourceIP, SourcePort, DestinationIP, DestinationPort, AwaitingRemoteAddress, User, UserAgent, Resource, RequestMethod, RequestURL, DTCode
