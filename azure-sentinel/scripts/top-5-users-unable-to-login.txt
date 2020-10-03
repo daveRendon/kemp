@@ -1,0 +1,11 @@
+//parse and show the top 5 users whom are unable to login through multiple IPs
+CommonSecurityLog
+| where DeviceVendor == "Kemp"
+| extend ExtFields = split(AdditionalExtensions, ';')
+| extend Event = split(ExtFields[1], "=")[1]
+| extend SourceIP = case( DeviceEventClassID !in (6, 14, 15), split(ExtFields[2], "=")[1], DeviceEventClassID == 6, split(ExtFields[3], "=")[1], SourceIP)
+| extend user_ext = split(ExtFields[6], "=")
+| extend User = case ( DeviceEventClassID == 6, split(ExtFields[2], "=")[1], DeviceEventClassID in (7, 8, 9, 10), split(ExtFields[3], "=")[1], DeviceEventClassID in (11, 12), iff( user_ext[0] == "user", user_ext[1], ""), "")
+| where Event == "Access Denied"
+| summarize UserCount = count() by User, tostring(Event), tostring(SourceIP)
+| top 5 by UserCount
