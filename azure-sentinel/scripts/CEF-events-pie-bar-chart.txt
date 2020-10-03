@@ -1,0 +1,7 @@
+// parse and show the CEF Event types in pie bar charts
+CommonSecurityLog
+| where DeviceVendor == "Kemp"
+| extend Event = split(split(AdditionalExtensions, ";")[1], "=")[1]
+| summarize Count = count() by tostring(Event)
+| sort by Count desc
+| render columnc
