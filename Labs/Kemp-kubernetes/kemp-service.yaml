@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kemp-k8s-servicemode
+  labels:
+    kempLB: Enabled
+  annotations:
+    "vsid": "1"
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+  selector:
+      app: azure-vote-front
+ 
