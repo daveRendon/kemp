@@ -3,12 +3,7 @@
 
 ## QuickStart Guide for POCs
 
-This repo contains all currently available KEMP templates contributed by the community to deliver guidance on POCs using Microsoft Azure. A searchable template index is maintained at https://github.com/KEMPtechnologies.
-The following information is relevant to get started with contributing to this repository.
-
-+ [**Contribution guide**](/1-CONTRIBUTION-GUIDE/README.md#contribution-guide). Describes the minimal guidelines for contributing.
-+ [**Best practices**](/1-CONTRIBUTION-GUIDE/best-practices.md#best-practices). Best practices for improving the quality of your template design.
-+ [**Useful Tools**](/1-CONTRIBUTION-GUIDE/useful-tools.md#useful-tools). Useful resources and tools.
+This repo contains all currently available KEMP resources 
 
 
 | Specifications  | VLM-200 | VLM-500 | VLM-3000 |VLM-5000 |VLM-10G |
