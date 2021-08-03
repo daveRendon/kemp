@@ -1,4 +1,4 @@
-### LoadMaster Dashboard Installer for Collector
+### LoadMaster Dashboard Installer for Flowmon Collector
 
 Docs: https://support.kemptechnologies.com/hc/en-us/articles/360058753911-LoadMaster-Dashboard-Installer-for-Collector.
 
