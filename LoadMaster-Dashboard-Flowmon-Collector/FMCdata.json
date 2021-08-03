@@ -1,0 +1,24 @@
+{
+"LMip4collector":"10.0.7.241", // LoadMaster IP Address
+"LMport4collector":"3000",
+"LMhostname":"DRendon-VLM", // LoadMaster hostname
+"FMCip":"10.0.7.247", // Flowmon Collector IP Adderss
+"VirtualServices":[ //create object per virtual service
+    {
+        "VSextip":"10.0.7.226", //virtual service IP
+        "VSextport":"80", //Virtual Service port
+        "VSintip":"10.0.7.226",
+        "VSintport":"80",
+        "VSclientexpr":"any",
+        "AppName":"WebApp",
+        "Servers":[ // add real servers
+        {
+        "ip":"10.0.7.66",
+        "port":"80"
+        },
+        {
+        "ip":"10.0.7.67",
+        "port":"80"
+        }]
+    }]
+}
